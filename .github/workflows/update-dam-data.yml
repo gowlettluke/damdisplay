@@ -2,6 +2,12 @@ name: Update Queensland dam data
 
 on:
   workflow_dispatch:
+    inputs:
+      full_history:
+        description: "Force a full 400-day history refresh"
+        required: false
+        default: false
+        type: boolean
   schedule:
     - cron: "17 * * * *"
 
@@ -35,7 +41,19 @@ jobs:
           python -m playwright install --with-deps chromium
 
       - name: Collect current and historical dam data
-        run: python scripts/update_dam_data.py --history-days 400 --retention-days 730 --verbose
+        shell: bash
+        run: |
+          EXTRA_ARGS=()
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.full_history }}" == "true" ]]; then
+            EXTRA_ARGS+=(--force-full-history)
+          fi
+          python scripts/update_dam_data.py \
+            --history-days 400 \
+            --retention-days 730 \
+            --incremental-overlap-days 3 \
+            --full-refresh-interval-days 7 \
+            --verbose \
+            "${EXTRA_ARGS[@]}"
 
       - name: Validate published data
         run: python scripts/validate_data.py
