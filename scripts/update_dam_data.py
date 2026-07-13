@@ -482,7 +482,7 @@ def recursively_find_historical(value: Any) -> dict[str, Any] | None:
     return None
 
 
-def fetch_seqwater_history(session: requests.Session, history_days: int) -> tuple[dict[str, list[dict[str, Any]]], dict[str, Any] | None, SourceHealth]:
+def fetch_seqwater_history(session: requests.Session, start_date: date, mode: str) -> tuple[dict[str, list[dict[str, Any]]], dict[str, Any] | None, SourceHealth]:
     health, timer = timed_health("seqwater_history", "Seqwater", "history_primary", True)
     try:
         page = session.get(SEQ_HISTORY_URL, timeout=REQUEST_TIMEOUT)
@@ -497,7 +497,8 @@ def fetch_seqwater_history(session: requests.Session, history_days: int) -> tupl
             raise RuntimeError("Seqwater Drupal form_build_id was not found")
 
         today_brisbane = datetime.now(BRISBANE).date()
-        start_date = today_brisbane - timedelta(days=history_days)
+        if start_date > today_brisbane:
+            start_date = today_brisbane
         body: dict[str, str] = {
             "start_date": start_date.isoformat(),
             "end_date": today_brisbane.isoformat(),
@@ -601,7 +602,8 @@ def fetch_seqwater_history(session: requests.Session, history_days: int) -> tupl
                 "history": grid_history,
             }
         return dict(histories), grid_summary, finish_health(
-            health, timer, "ok", records=total, dams=len(histories), newest=newest
+            health, timer, "ok", records=total, dams=len(histories), newest=newest,
+            message=f"history_mode={mode}; start_date={start_date.isoformat()}"
         )
     except Exception as exc:  # noqa: BLE001
         return {}, None, finish_health(health, timer, "failed", message=str(exc))
@@ -628,22 +630,32 @@ def discover_sunwater_sites(session: requests.Session) -> tuple[list[dict[str, s
     return sites, response.text
 
 
-def fetch_sunwater_api(session: requests.Session, history_days: int) -> tuple[dict[str, list[dict[str, Any]]], list[dict[str, Any]], SourceHealth]:
+def fetch_sunwater_api(
+    session: requests.Session,
+    default_start_utc: datetime,
+    start_by_station: dict[str, datetime],
+    mode: str,
+) -> tuple[dict[str, list[dict[str, Any]]], list[dict[str, Any]], SourceHealth]:
     health, timer = timed_health("sunwater_api", "Sunwater", "current_and_history_primary", True)
     try:
         sites, _ = discover_sunwater_sites(session)
-        start_local = datetime.now(BRISBANE) - timedelta(days=history_days)
-        start_utc = start_local.replace(hour=0, minute=0, second=0, microsecond=0).astimezone(UTC)
-        start_text = start_utc.isoformat(timespec="milliseconds").replace("+00:00", "Z")
 
         histories: dict[str, list[dict[str, Any]]] = defaultdict(list)
         current: list[dict[str, Any]] = []
         newest: datetime | None = None
         errors: list[str] = []
+        station_ranges: list[str] = []
 
         for site in sites:
             code = site["station_code"]
             fallback_name = site["dam_name"]
+            station_start = start_by_station.get(code.upper(), default_start_utc)
+            if station_start.tzinfo is None:
+                station_start = station_start.replace(tzinfo=UTC)
+            station_start = station_start.astimezone(UTC)
+            start_text = station_start.isoformat(timespec="milliseconds").replace("+00:00", "Z")
+            station_ranges.append(f"{code}:{station_start.date().isoformat()}")
+
             token = 1
             page_count = 0
             site_rows: list[dict[str, Any]] = []
@@ -717,10 +729,16 @@ def fetch_sunwater_api(session: requests.Session, history_days: int) -> tuple[di
         if not current:
             raise RuntimeError("No Sunwater API dam observations were collected" + (": " + "; ".join(errors[:4]) if errors else ""))
         status = "partial" if errors else "ok"
-        message = "; ".join(errors[:8]) if errors else None
+        range_summary = ", ".join(station_ranges[:4])
+        if len(station_ranges) > 4:
+            range_summary += f", +{len(station_ranges) - 4} stations"
+        message_parts = [f"history_mode={mode}; starts={range_summary}"]
+        if errors:
+            message_parts.append("; ".join(errors[:8]))
         total_records = sum(len(v) for v in histories.values())
         return dict(histories), current, finish_health(
-            health, timer, status, records=total_records, dams=len(current), newest=newest, message=message
+            health, timer, status, records=total_records, dams=len(current), newest=newest,
+            message=" | ".join(message_parts),
         )
     except Exception as exc:  # noqa: BLE001
         return {}, [], finish_health(health, timer, "failed", message=str(exc))
@@ -811,12 +829,140 @@ def fetch_sunwater_current_page(skip_browser: bool) -> tuple[list[dict[str, Any]
         return [], finish_health(health, timer, "failed", message=str(exc))
 
 
+
+def read_stored_history_state(catalogue: dict[str, Any]) -> dict[str, Any]:
+    """Inspect committed history and return latest provider timestamps.
+
+    Seqwater is requested once for every dam, so one shared latest date is used only
+    when every expected Seqwater dam already has stored history. Sunwater can use a
+    separate start timestamp for each station.
+    """
+    latest_seqwater_by_dam: dict[str, datetime] = {}
+    seqwater_dams_with_history: set[str] = set()
+    latest_sunwater_by_station: dict[str, datetime] = {}
+
+    for path in HISTORY_DIR.glob("*.json"):
+        doc = json_read(path, {})
+        observations = doc.get("observations", []) if isinstance(doc, dict) else []
+        for row in observations:
+            if not isinstance(row, dict):
+                continue
+            observed = parse_datetime(row.get("observed_at") or row.get("observation_date"))
+            if observed is None:
+                continue
+            source = row.get("source")
+            if source == "seqwater_history":
+                did = compact_ws(row.get("dam_id") or doc.get("dam_id"))
+                if did and did != "seq-water-grid":
+                    seqwater_dams_with_history.add(did)
+                    previous = latest_seqwater_by_dam.get(did)
+                    if previous is None or observed > previous:
+                        latest_seqwater_by_dam[did] = observed
+            elif source == "sunwater_api":
+                station = compact_ws(row.get("station_code")).upper()
+                if not station:
+                    did = compact_ws(row.get("dam_id") or doc.get("dam_id"))
+                    item = catalogue["by_id"].get(did)
+                    station = compact_ws(item.get("station_code") if item else "").upper()
+                if station:
+                    previous = latest_sunwater_by_station.get(station)
+                    if previous is None or observed > previous:
+                        latest_sunwater_by_station[station] = observed
+
+    expected_seqwater_ids = {
+        item["id"] for item in catalogue["dams"] if item.get("operator") == "Seqwater"
+    }
+    expected_sunwater_stations = {
+        compact_ws(item.get("station_code")).upper()
+        for item in catalogue["dams"]
+        if item.get("operator") == "Sunwater" and compact_ws(item.get("station_code"))
+    }
+    latest_seqwater_common = (
+        min(latest_seqwater_by_dam.values()) if latest_seqwater_by_dam else None
+    )
+    return {
+        "latest_seqwater": latest_seqwater_common,
+        "latest_seqwater_by_dam": latest_seqwater_by_dam,
+        "seqwater_complete": expected_seqwater_ids.issubset(seqwater_dams_with_history),
+        "missing_seqwater_dams": sorted(expected_seqwater_ids - seqwater_dams_with_history),
+        "latest_sunwater_by_station": latest_sunwater_by_station,
+        "missing_sunwater_stations": sorted(expected_sunwater_stations - set(latest_sunwater_by_station)),
+        "history_files": len(list(HISTORY_DIR.glob("*.json"))),
+    }
+
+
+def history_refresh_plan(
+    catalogue: dict[str, Any],
+    *,
+    full_history_days: int,
+    overlap_days: int,
+    full_refresh_interval_days: int,
+    force_full: bool,
+) -> dict[str, Any]:
+    now = utc_now()
+    today_brisbane = now.astimezone(BRISBANE).date()
+    full_start_date = today_brisbane - timedelta(days=full_history_days)
+    full_start_local = datetime.combine(full_start_date, datetime.min.time(), tzinfo=BRISBANE)
+    full_start_utc = full_start_local.astimezone(UTC)
+    state = read_stored_history_state(catalogue)
+    previous_manifest = json_read(DATA_DIR / "run_manifest.json", {})
+    last_full = parse_datetime(previous_manifest.get("last_full_history_refresh")) if isinstance(previous_manifest, dict) else None
+    full_due = (
+        force_full
+        or state["history_files"] == 0
+        or last_full is None
+        or now - last_full >= timedelta(days=full_refresh_interval_days)
+    )
+
+    if full_due or not state["seqwater_complete"] or state["latest_seqwater"] is None:
+        seq_start_date = full_start_date
+        seq_mode = "full"
+    else:
+        seq_start_date = (
+            state["latest_seqwater"].astimezone(BRISBANE).date() - timedelta(days=overlap_days)
+        )
+        seq_start_date = max(seq_start_date, full_start_date)
+        seq_mode = "incremental"
+
+    sun_starts: dict[str, datetime] = {}
+    for item in catalogue["dams"]:
+        if item.get("operator") != "Sunwater":
+            continue
+        station = compact_ws(item.get("station_code")).upper()
+        if not station:
+            continue
+        latest = state["latest_sunwater_by_station"].get(station)
+        if full_due or latest is None:
+            sun_starts[station] = full_start_utc
+        else:
+            sun_starts[station] = max(latest - timedelta(days=overlap_days), full_start_utc)
+
+    return {
+        "full_due": full_due,
+        "full_start_date": full_start_date,
+        "full_start_utc": full_start_utc,
+        "seq_start_date": seq_start_date,
+        "seq_mode": seq_mode,
+        "sun_start_by_station": sun_starts,
+        "sun_mode": "full" if full_due else "incremental",
+        "last_full_history_refresh": iso(last_full),
+        "stored_state": state,
+    }
+
+
+def load_grid_history(retention_days: int, incoming: list[dict[str, Any]] | None = None) -> dict[str, Any] | None:
+    merged = merge_history("seq-water-grid", incoming or [], retention_days)
+    if not merged:
+        return None
+    return {"current": merged[-1], "history": merged}
+
 def history_key(row: dict[str, Any]) -> str:
+    # The provider source and observation timestamp identify one observation.
+    # Incoming rows are merged after stored rows, so a provider correction for an
+    # existing timestamp replaces the older stored values rather than creating a duplicate.
     return "|".join([
         str(row.get("source") or ""),
         str(row.get("observed_at") or row.get("observation_date") or ""),
-        str(row.get("capacity_percent") if row.get("capacity_percent") is not None else ""),
-        str(row.get("volume_ml") if row.get("volume_ml") is not None else ""),
     ])
 
 
@@ -1017,8 +1163,23 @@ def build_summaries(dams: list[dict[str, Any]]) -> dict[str, Any]:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--history-days", type=int, default=400)
+    parser.add_argument(
+        "--history-days", type=int, default=400,
+        help="Days requested during an initial or periodic full history refresh.",
+    )
     parser.add_argument("--retention-days", type=int, default=730)
+    parser.add_argument(
+        "--incremental-overlap-days", type=int, default=3,
+        help="Overlap re-requested on normal runs so revised recent observations replace stored values.",
+    )
+    parser.add_argument(
+        "--full-refresh-interval-days", type=int, default=7,
+        help="Maximum age of the last full history refresh before another full refresh is run.",
+    )
+    parser.add_argument(
+        "--force-full-history", action="store_true",
+        help="Ignore stored timestamps and request the full --history-days range now.",
+    )
     parser.add_argument("--skip-sunwater-browser", action="store_true")
     parser.add_argument("--verbose", action="store_true")
     args = parser.parse_args()
@@ -1030,9 +1191,21 @@ def main() -> int:
     session = request_session()
     generated = utc_now()
 
+    plan = history_refresh_plan(
+        catalogue,
+        full_history_days=args.history_days,
+        overlap_days=args.incremental_overlap_days,
+        full_refresh_interval_days=args.full_refresh_interval_days,
+        force_full=args.force_full_history,
+    )
+
     seq_current, h_seq_current = fetch_seqwater_current(session)
-    seq_histories, grid_summary, h_seq_history = fetch_seqwater_history(session, args.history_days)
-    sun_histories, sun_api_current, h_sun_api = fetch_sunwater_api(session, args.history_days)
+    seq_histories, incoming_grid_summary, h_seq_history = fetch_seqwater_history(
+        session, plan["seq_start_date"], plan["seq_mode"]
+    )
+    sun_histories, sun_api_current, h_sun_api = fetch_sunwater_api(
+        session, plan["full_start_utc"], plan["sun_start_by_station"], plan["sun_mode"]
+    )
     sun_page_current, h_sun_page = fetch_sunwater_current_page(args.skip_sunwater_browser)
     health = [h_seq_current, h_seq_history, h_sun_api, h_sun_page]
 
@@ -1041,6 +1214,9 @@ def main() -> int:
     sun_api_current = canonicalise_rows(sun_api_current, catalogue)
     sun_histories = canonicalise_histories(sun_histories, catalogue)
     sun_page_current = canonicalise_rows(sun_page_current, catalogue)
+
+    incoming_grid_history = (incoming_grid_summary or {}).get("history", [])
+    grid_summary = load_grid_history(args.retention_days, incoming_grid_history)
 
     previous_current = {
         did: enrich_from_catalogue(row, catalogue)
@@ -1105,6 +1281,14 @@ def main() -> int:
     current_doc = {
         "generated_at": iso(generated),
         "timezone": "Australia/Brisbane",
+        "history_collection": {
+            "seqwater_mode": plan["seq_mode"],
+            "seqwater_start_date": plan["seq_start_date"].isoformat(),
+            "sunwater_mode": plan["sun_mode"],
+            "incremental_overlap_days": args.incremental_overlap_days,
+            "full_history_days": args.history_days,
+            "full_refresh_interval_days": args.full_refresh_interval_days,
+        },
         "catalogue_generated_at": catalogue.get("generated_at"),
         "catalogue_dams": len(catalogue["dams"]),
         "interpretation_notes": [
@@ -1119,8 +1303,32 @@ def main() -> int:
     }
     json_write(DATA_DIR / "dams_current.json", current_doc)
 
+    previous_manifest = json_read(DATA_DIR / "run_manifest.json", {})
+    full_history_succeeded = (
+        plan["full_due"]
+        and h_seq_history.status == "ok"
+        and h_sun_api.status in {"ok", "partial"}
+    )
+    last_full_history_refresh = (
+        iso(generated)
+        if full_history_succeeded
+        else previous_manifest.get("last_full_history_refresh")
+        if isinstance(previous_manifest, dict)
+        else None
+    )
+
     manifest = {
         "generated_at": iso(generated),
+        "last_full_history_refresh": last_full_history_refresh,
+        "history_collection_mode": {
+            "seqwater": plan["seq_mode"],
+            "sunwater": plan["sun_mode"],
+        },
+        "history_request_start": {
+            "seqwater": plan["seq_start_date"].isoformat(),
+            "sunwater_earliest": min(plan["sun_start_by_station"].values()).date().isoformat()
+            if plan["sun_start_by_station"] else plan["full_start_utc"].date().isoformat(),
+        },
         "dams_published": len(output_dams),
         "catalogue_dams": len(catalogue["dams"]),
         "history_files": len(list(HISTORY_DIR.glob("*.json"))),
@@ -1137,6 +1345,17 @@ def main() -> int:
     json_write(DATA_DIR / "run_manifest.json", manifest)
 
     if args.verbose:
+        printable_plan = {
+            "full_due": plan["full_due"],
+            "last_full_history_refresh": plan["last_full_history_refresh"],
+            "seqwater_mode": plan["seq_mode"],
+            "seqwater_start_date": plan["seq_start_date"].isoformat(),
+            "sunwater_mode": plan["sun_mode"],
+            "missing_seqwater_dams_before_run": plan["stored_state"]["missing_seqwater_dams"],
+            "missing_sunwater_stations_before_run": plan["stored_state"]["missing_sunwater_stations"],
+        }
+        print("History refresh plan:")
+        print(json.dumps(printable_plan, indent=2))
         print(json.dumps(manifest, indent=2))
         for item in health:
             print(f"{item.source}: {item.status} ({item.records} records, {item.dams} dams) {item.message or ''}")
