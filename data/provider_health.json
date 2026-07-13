@@ -1,6 +1,63 @@
 {
-  "generated_at": "not_run",
-  "overall_status": "not_run",
-  "required_source_failure_count": 0,
-  "sources": []
+  "generated_at": "2026-07-13T16:10:05.810160Z",
+  "overall_status": "failed",
+  "required_source_failure_count": 1,
+  "sources": [
+    {
+      "source": "seqwater_current_page",
+      "provider": "Seqwater",
+      "role": "current_primary",
+      "required": true,
+      "status": "failed",
+      "records": 0,
+      "dams": 0,
+      "newest_observation": null,
+      "message": "Could not locate the Seqwater current dam-level table",
+      "started_at": "2026-07-13T16:10:05.810166Z",
+      "finished_at": "2026-07-13T16:10:06.239226Z",
+      "duration_seconds": 0.429
+    },
+    {
+      "source": "seqwater_history",
+      "provider": "Seqwater",
+      "role": "history_primary",
+      "required": true,
+      "status": "ok",
+      "records": 10423,
+      "dams": 25,
+      "newest_observation": "2026-07-13T14:00:00Z",
+      "message": null,
+      "started_at": "2026-07-13T16:10:06.239327Z",
+      "finished_at": "2026-07-13T16:10:12.386896Z",
+      "duration_seconds": 6.148
+    },
+    {
+      "source": "sunwater_api",
+      "provider": "Sunwater",
+      "role": "current_and_history_primary",
+      "required": true,
+      "status": "ok",
+      "records": 279579,
+      "dams": 20,
+      "newest_observation": "2026-07-13T16:00:00Z",
+      "message": null,
+      "started_at": "2026-07-13T16:10:12.387344Z",
+      "finished_at": "2026-07-13T16:12:54.005386Z",
+      "duration_seconds": 161.618
+    },
+    {
+      "source": "sunwater_current_page",
+      "provider": "Sunwater",
+      "role": "current_validation_fallback",
+      "required": false,
+      "status": "failed",
+      "records": 0,
+      "dams": 0,
+      "newest_observation": null,
+      "message": "Page.goto: Timeout 90000ms exceeded.\nCall log:\n  - navigating to \"https://www.sunwater.com.au/dams/\", waiting until \"networkidle\"\n",
+      "started_at": "2026-07-13T16:12:54.005477Z",
+      "finished_at": "2026-07-13T16:14:24.872693Z",
+      "duration_seconds": 90.867
+    }
+  ]
 }
