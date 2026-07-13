@@ -60,15 +60,33 @@ jobs:
         run: python scripts/validate_data.py
 
       - name: Commit refreshed data
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Keep the workflow checkout current before committing generated data.
+          # Scheduled runs can otherwise fail with a non-fast-forward push when
+          # someone has pushed to main since this job checked out the repo.
+          git pull --rebase --autostash origin main
+
           git add data/
           if git diff --cached --quiet; then
             echo "No data changes to commit."
           else
             git commit -m "Update Queensland dam data"
-            git push
+            for attempt in 1 2 3; do
+              if git push origin HEAD:main; then
+                break
+              fi
+              if [[ "$attempt" == "3" ]]; then
+                echo "Failed to push refreshed data after $attempt attempts." >&2
+                exit 1
+              fi
+              echo "Push was rejected, rebasing onto latest main and retrying..."
+              git pull --rebase origin main
+            done
           fi
 
       - name: Configure GitHub Pages
