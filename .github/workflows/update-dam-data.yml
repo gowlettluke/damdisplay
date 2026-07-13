@@ -11,6 +11,10 @@ on:
   schedule:
     - cron: "17 * * * *"
 
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
 permissions:
   contents: write
   pages: write
@@ -18,6 +22,7 @@ permissions:
 
 jobs:
   update-and-build:
+    name: Collect and upload site artifact
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -75,14 +80,12 @@ jobs:
           path: .
 
   deploy:
+    name: Deploy refreshed site
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: update-and-build
-    concurrency:
-      group: github-pages-deployment
-      cancel-in-progress: true
     steps:
       - name: Deploy GitHub Pages
         id: deployment
