@@ -36,6 +36,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 HISTORY_DIR = DATA_DIR / "history"
 RAW_DIR = DATA_DIR / "raw"
+CATALOGUE_PATH = DATA_DIR / "dams.json"
 
 SEQ_CURRENT_URL = "https://www.seqwater.com.au/dam-levels"
 SEQ_HISTORY_URL = "https://www.seqwater.com.au/historic-dam-levels"
@@ -91,6 +92,139 @@ def json_read(path: Path, default: Any) -> Any:
     except (FileNotFoundError, json.JSONDecodeError, OSError):
         return default
 
+
+
+
+def load_catalogue() -> dict[str, Any]:
+    doc = json_read(CATALOGUE_PATH, {})
+    dams = doc.get("dams", []) if isinstance(doc, dict) else []
+    if not isinstance(dams, list) or not dams:
+        raise RuntimeError("data/dams.json is missing or contains no dams")
+
+    by_id: dict[str, dict[str, Any]] = {}
+    by_station: dict[str, dict[str, Any]] = {}
+    by_name: dict[str, dict[str, Any]] = {}
+    for raw in dams:
+        if not isinstance(raw, dict):
+            continue
+        did = compact_ws(raw.get("id") or raw.get("slug"))
+        name = compact_ws(raw.get("name"))
+        operator = compact_ws(raw.get("operator"))
+        if not did or not name or operator not in {"Seqwater", "Sunwater"}:
+            continue
+        item = dict(raw)
+        item["id"] = did
+        item["name"] = name
+        item["operator"] = operator
+        by_id[did] = item
+        station = compact_ws(item.get("station_code"))
+        if station:
+            by_station[station.upper()] = item
+        names = [name, item.get("source_name"), *(item.get("aliases") or [])]
+        for value in names:
+            value = compact_ws(value)
+            if not value:
+                continue
+            by_name[slugify(normalise_display_name(value))] = item
+            by_name[slugify(value)] = item
+
+    if not by_id:
+        raise RuntimeError("data/dams.json did not contain any valid dam records")
+    return {
+        "generated_at": doc.get("generated_at"),
+        "dams": list(by_id.values()),
+        "by_id": by_id,
+        "by_station": by_station,
+        "by_name": by_name,
+    }
+
+
+def catalogue_match(row: dict[str, Any], catalogue: dict[str, Any]) -> dict[str, Any] | None:
+    station = compact_ws(row.get("station_code"))
+    if station:
+        match = catalogue["by_station"].get(station.upper())
+        if match:
+            return match
+    did = compact_ws(row.get("dam_id"))
+    if did and did in catalogue["by_id"]:
+        return catalogue["by_id"][did]
+    for value in (row.get("dam_name"), row.get("source_name")):
+        value = compact_ws(value)
+        if not value:
+            continue
+        for key in (slugify(normalise_display_name(value)), slugify(value)):
+            match = catalogue["by_name"].get(key)
+            if match:
+                return match
+    return None
+
+
+def enrich_from_catalogue(row: dict[str, Any], catalogue: dict[str, Any]) -> dict[str, Any]:
+    output = dict(row)
+    match = catalogue_match(output, catalogue)
+    if not match:
+        output.setdefault("quality_flags", [])
+        if "catalogue_match_missing" not in output["quality_flags"]:
+            output["quality_flags"].append("catalogue_match_missing")
+        return output
+    output["dam_id"] = match["id"]
+    output["dam_name"] = match["name"]
+    output["operator"] = match["operator"]
+    for field in (
+        "latitude", "longitude", "region", "scheme", "watercourse",
+        "official_url", "capacity_note", "managed_asset", "station_code"
+    ):
+        value = match.get(field)
+        if value not in (None, "") or field not in output:
+            output[field] = value
+    output["catalogue_source_name"] = match.get("source_name")
+    output["aliases"] = match.get("aliases") or []
+    return output
+
+
+def canonicalise_rows(rows: list[dict[str, Any]], catalogue: dict[str, Any]) -> list[dict[str, Any]]:
+    return [enrich_from_catalogue(row, catalogue) for row in rows]
+
+
+def canonicalise_histories(histories: dict[str, list[dict[str, Any]]], catalogue: dict[str, Any]) -> dict[str, list[dict[str, Any]]]:
+    output: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for rows in histories.values():
+        for raw in rows:
+            row = enrich_from_catalogue(raw, catalogue)
+            output[row.get("dam_id") or raw.get("dam_id")].append(row)
+    for rows in output.values():
+        rows.sort(key=lambda x: x.get("observed_at") or x.get("observation_date") or "")
+    return dict(output)
+
+
+def ensure_catalogue_coverage(rows: list[dict[str, Any]], catalogue: dict[str, Any]) -> list[dict[str, Any]]:
+    by_id = {row.get("dam_id"): row for row in rows if row.get("dam_id")}
+    for item in catalogue["dams"]:
+        did = item["id"]
+        if did in by_id:
+            by_id[did] = enrich_from_catalogue(by_id[did], catalogue)
+            continue
+        placeholder = enrich_from_catalogue({
+            "dam_id": did,
+            "dam_name": item["name"],
+            "operator": item["operator"],
+            "capacity_percent": None,
+            "volume_ml": None,
+            "full_supply_volume_ml": None,
+            "storage_level_m": None,
+            "rainfall_mm": None,
+            "flow_cms": None,
+            "total_flow_ml": None,
+            "river_level_m": None,
+            "observed_at": None,
+            "observation_precision": "unavailable",
+            "information": "No current observation was available from the provider feeds in this run.",
+            "source": None,
+            "current_source_status": "no_current_data",
+            "quality_flags": ["no_current_data"],
+        }, catalogue)
+        by_id[did] = placeholder
+    return list(by_id.values())
 
 def compact_ws(value: Any) -> str:
     return re.sub(r"\s+", " ", str(value or "")).strip()
@@ -822,6 +956,7 @@ def main() -> int:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     HISTORY_DIR.mkdir(parents=True, exist_ok=True)
     RAW_DIR.mkdir(parents=True, exist_ok=True)
+    catalogue = load_catalogue()
     session = request_session()
     generated = utc_now()
 
@@ -831,7 +966,16 @@ def main() -> int:
     sun_page_current, h_sun_page = fetch_sunwater_current_page(args.skip_sunwater_browser)
     health = [h_seq_current, h_seq_history, h_sun_api, h_sun_page]
 
-    previous_current = latest_previous_current()
+    seq_current = canonicalise_rows(seq_current, catalogue)
+    seq_histories = canonicalise_histories(seq_histories, catalogue)
+    sun_api_current = canonicalise_rows(sun_api_current, catalogue)
+    sun_histories = canonicalise_histories(sun_histories, catalogue)
+    sun_page_current = canonicalise_rows(sun_page_current, catalogue)
+
+    previous_current = {
+        did: enrich_from_catalogue(row, catalogue)
+        for did, row in latest_previous_current().items()
+    }
     current_records = select_current_records(
         seq_current,
         seq_histories,
@@ -839,6 +983,7 @@ def main() -> int:
         sun_page_current,
         previous_current,
     )
+    current_records = ensure_catalogue_coverage(current_records, catalogue)
 
     combined_incoming: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for did, rows in seq_histories.items():
@@ -890,6 +1035,8 @@ def main() -> int:
     current_doc = {
         "generated_at": iso(generated),
         "timezone": "Australia/Brisbane",
+        "catalogue_generated_at": catalogue.get("generated_at"),
+        "catalogue_dams": len(catalogue["dams"]),
         "interpretation_notes": [
             "Operator readings are automated public data and may be unverified.",
             "Values above 100% are retained as published.",
@@ -905,6 +1052,7 @@ def main() -> int:
     manifest = {
         "generated_at": iso(generated),
         "dams_published": len(output_dams),
+        "catalogue_dams": len(catalogue["dams"]),
         "history_files": len(list(HISTORY_DIR.glob("*.json"))),
         "provider_health": health_doc["overall_status"],
         "required_source_failure_count": len(required_failures),
