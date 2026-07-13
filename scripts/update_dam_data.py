@@ -341,6 +341,59 @@ def find_table_by_headers(soup: BeautifulSoup, required_headers: Iterable[str]) 
     return None
 
 
+def find_seqwater_current_table(soup: BeautifulSoup) -> Any | None:
+    """Locate Seqwater's current dam table without relying on one exact heading label.
+
+    Seqwater currently labels the first column ``Dam`` rather than ``Dam name``.
+    Prefer the stable block/table classes used by the page, then fall back to
+    semantic header matching so minor presentation changes do not break the feed.
+    """
+    table = soup.select_one(".block-seqw-dam-levels table.dam-levels-table")
+    if table is None:
+        table = soup.select_one(".block-seqw-dam-levels table")
+    if table is not None:
+        return table
+
+    for candidate in soup.find_all("table"):
+        headers = [
+            compact_ws(node.get_text(" ", strip=True)).lower()
+            for node in candidate.find_all("th")
+        ]
+        joined = " | ".join(headers)
+        has_dam_column = any(header in {"dam", "dam name"} for header in headers)
+        if (
+            has_dam_column
+            and "full supply volume" in joined
+            and "current volume" in joined
+            and "% full" in joined
+            and "latest observation" in joined
+        ):
+            return candidate
+    return None
+
+
+def cell_number(cell: Any | None) -> float | None:
+    if cell is None:
+        return None
+    raw = cell.get("data-sort") if hasattr(cell, "get") else None
+    if raw in (None, ""):
+        raw = cell.get_text(" ", strip=True)
+    return parse_number(raw)
+
+
+def cell_observation(cell: Any | None) -> datetime | None:
+    if cell is None:
+        return None
+    parsed = parse_datetime(cell.get_text(" ", strip=True), dayfirst=True)
+    if parsed is not None:
+        return parsed
+    raw_epoch = cell.get("data-sort") if hasattr(cell, "get") else None
+    try:
+        return datetime.fromtimestamp(float(raw_epoch), tz=UTC)
+    except (TypeError, ValueError, OSError, OverflowError):
+        return None
+
+
 def fetch_seqwater_current(session: requests.Session) -> tuple[list[dict[str, Any]], SourceHealth]:
     health, timer = timed_health("seqwater_current_page", "Seqwater", "current_primary", True)
     try:
@@ -348,32 +401,49 @@ def fetch_seqwater_current(session: requests.Session) -> tuple[list[dict[str, An
         response.raise_for_status()
         save_raw("seqwater_current_page", response.text)
         soup = BeautifulSoup(response.text, "html.parser")
-        table = find_table_by_headers(soup, ["dam name", "% full", "latest observation"])
+        table = find_seqwater_current_table(soup)
         if table is None:
             raise RuntimeError("Could not locate the Seqwater current dam-level table")
 
         rows: list[dict[str, Any]] = []
         for tr in table.select("tbody tr"):
-            cells = tr.find_all("td")
+            cells = tr.find_all("td", recursive=False)
             if len(cells) < 5:
                 continue
-            values = [compact_ws(cell.get_text(" ", strip=True)) for cell in cells]
-            raw_name = values[0]
+
+            # The first cell also contains a Historical levels link and may contain
+            # hidden tooltip text. Select only the actual dam link.
+            name_link = tr.select_one('td:first-child a[href^="/dams/"]')
+            raw_name = compact_ws(name_link.get_text(" ", strip=True) if name_link else cells[0].get_text(" ", strip=True))
             raw_name = re.split(r"\s+View\s+|\s+Historical\s+levels", raw_name, maxsplit=1, flags=re.I)[0]
             if not raw_name:
                 continue
+
+            supply_cell = tr.select_one("td.volume.supply")
+            current_volume_cell = tr.select_one("td.volume:not(.supply)")
+            percent_cell = tr.select_one("td.percent")
+            observation_cell = tr.select_one("td.observation")
+            comment_cell = tr.select_one("td.comment")
+
+            # Index fallbacks preserve compatibility if Seqwater removes classes.
+            supply_cell = supply_cell or (cells[1] if len(cells) > 1 else None)
+            current_volume_cell = current_volume_cell or (cells[2] if len(cells) > 2 else None)
+            percent_cell = percent_cell or (cells[3] if len(cells) > 3 else None)
+            observation_cell = observation_cell or (cells[4] if len(cells) > 4 else None)
+            comment_cell = comment_cell or (cells[5] if len(cells) > 5 else None)
+
             dam_name = normalise_display_name(raw_name)
-            observation = parse_datetime(values[4], dayfirst=True)
-            info = values[5] if len(values) > 5 else ""
+            observation = cell_observation(observation_cell)
+            info = compact_ws(comment_cell.get_text(" ", strip=True)) if comment_cell else ""
             row = {
                 "dam_id": dam_id_for(dam_name),
                 "dam_name": dam_name,
                 "operator": "Seqwater",
-                "capacity_percent": parse_number(values[3]),
-                "full_supply_volume_ml": parse_number(values[1]),
-                "volume_ml": parse_number(values[2]),
+                "capacity_percent": cell_number(percent_cell),
+                "full_supply_volume_ml": cell_number(supply_cell),
+                "volume_ml": cell_number(current_volume_cell),
                 "observed_at": iso(observation),
-                "observation_precision": "datetime",
+                "observation_precision": "datetime" if observation else "unavailable",
                 "information": info or None,
                 "source": "seqwater_current_page",
                 "source_url": SEQ_CURRENT_URL,
