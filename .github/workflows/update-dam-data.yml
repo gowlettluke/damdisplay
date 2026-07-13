@@ -45,7 +45,7 @@ jobs:
         shell: bash
         run: |
           EXTRA_ARGS=()
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.full_history }}" == "true" ]]; then
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ github.event.inputs.full_history || 'false' }}" == "true" ]]; then
             EXTRA_ARGS+=(--force-full-history)
           fi
           python scripts/update_dam_data.py \
