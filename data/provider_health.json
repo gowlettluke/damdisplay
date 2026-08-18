@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-18T21:43:12.915113Z",
+  "generated_at": "2026-08-18T22:44:54.202400Z",
   "overall_status": "degraded",
   "required_source_failure_count": 0,
   "sources": [
@@ -13,9 +13,9 @@
       "dams": 25,
       "newest_observation": "2026-08-18T21:01:00Z",
       "message": null,
-      "started_at": "2026-08-18T21:43:33.585234Z",
-      "finished_at": "2026-08-18T21:43:34.857697Z",
-      "duration_seconds": 1.272
+      "started_at": "2026-08-18T22:45:06.078069Z",
+      "finished_at": "2026-08-18T22:45:06.961782Z",
+      "duration_seconds": 0.884
     },
     {
       "source": "seqwater_history",
@@ -27,9 +27,9 @@
       "dams": 25,
       "newest_observation": "2026-08-18T14:00:00Z",
       "message": "history_mode=incremental; start_date=2026-08-16",
-      "started_at": "2026-08-18T21:43:34.857742Z",
-      "finished_at": "2026-08-18T21:43:39.506901Z",
-      "duration_seconds": 4.649
+      "started_at": "2026-08-18T22:45:06.961824Z",
+      "finished_at": "2026-08-18T22:45:10.037225Z",
+      "duration_seconds": 3.075
     },
     {
       "source": "sunwater_api",
@@ -37,13 +37,13 @@
       "role": "current_and_history_primary",
       "required": true,
       "status": "ok",
-      "records": 95331,
+      "records": 95256,
       "dams": 20,
-      "newest_observation": "2026-08-18T21:35:00Z",
-      "message": "history_mode=incremental; starts=110014A:2025-07-14, 120016A:2026-08-15, 120211A:2026-08-13, 122010A:2026-08-15, +16 stations",
-      "started_at": "2026-08-18T21:43:39.506999Z",
-      "finished_at": "2026-08-18T21:44:51.962022Z",
-      "duration_seconds": 72.455
+      "newest_observation": "2026-08-18T22:30:00Z",
+      "message": "history_mode=incremental; starts=110014A:2025-07-14, 120016A:2026-08-15, 120211A:2026-08-15, 122010A:2026-08-15, +16 stations",
+      "started_at": "2026-08-18T22:45:10.037276Z",
+      "finished_at": "2026-08-18T22:46:12.240072Z",
+      "duration_seconds": 62.203
     },
     {
       "source": "sunwater_current_page",
@@ -55,9 +55,9 @@
       "dams": 0,
       "newest_observation": null,
       "message": "Page.goto: Timeout 90000ms exceeded.\nCall log:\n  - navigating to \"https://www.sunwater.com.au/dams/\", waiting until \"networkidle\"\n",
-      "started_at": "2026-08-18T21:44:51.962139Z",
-      "finished_at": "2026-08-18T21:46:22.609363Z",
-      "duration_seconds": 90.647
+      "started_at": "2026-08-18T22:46:12.240182Z",
+      "finished_at": "2026-08-18T22:47:42.982059Z",
+      "duration_seconds": 90.742
     }
   ]
 }
