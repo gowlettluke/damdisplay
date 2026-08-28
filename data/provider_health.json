@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-28T05:28:00.948690Z",
-  "overall_status": "degraded",
-  "required_source_failure_count": 0,
+  "generated_at": "2026-08-28T18:48:25.637293Z",
+  "overall_status": "failed",
+  "required_source_failure_count": 1,
   "sources": [
     {
       "source": "seqwater_current_page",
@@ -11,11 +11,11 @@
       "status": "ok",
       "records": 25,
       "dams": 25,
-      "newest_observation": "2026-08-28T03:52:00Z",
+      "newest_observation": "2026-08-28T18:01:00Z",
       "message": null,
-      "started_at": "2026-08-28T05:28:17.558298Z",
-      "finished_at": "2026-08-28T05:28:18.284942Z",
-      "duration_seconds": 0.727
+      "started_at": "2026-08-28T18:48:36.680123Z",
+      "finished_at": "2026-08-28T18:48:37.296775Z",
+      "duration_seconds": 0.617
     },
     {
       "source": "seqwater_history",
@@ -23,27 +23,27 @@
       "role": "history_primary",
       "required": true,
       "status": "ok",
-      "records": 104,
+      "records": 130,
       "dams": 25,
-      "newest_observation": "2026-08-27T14:00:00Z",
+      "newest_observation": "2026-08-28T14:00:00Z",
       "message": "history_mode=incremental; start_date=2026-08-25",
-      "started_at": "2026-08-28T05:28:18.284987Z",
-      "finished_at": "2026-08-28T05:28:23.389080Z",
-      "duration_seconds": 5.104
+      "started_at": "2026-08-28T18:48:37.296801Z",
+      "finished_at": "2026-08-28T18:48:40.988333Z",
+      "duration_seconds": 3.692
     },
     {
       "source": "sunwater_api",
       "provider": "Sunwater",
       "role": "current_and_history_primary",
       "required": true,
-      "status": "ok",
-      "records": 96669,
-      "dams": 20,
-      "newest_observation": "2026-08-28T05:15:00Z",
-      "message": "history_mode=incremental; starts=110014A:2025-07-23, 120016A:2026-08-24, 120211A:2026-08-24, 122010A:2026-08-24, +16 stations",
-      "started_at": "2026-08-28T05:28:23.389143Z",
-      "finished_at": "2026-08-28T05:29:27.422430Z",
-      "duration_seconds": 64.033
+      "status": "failed",
+      "records": 0,
+      "dams": 0,
+      "newest_observation": null,
+      "message": "403 Client Error: Forbidden for url: https://www.sunwater.com.au/water-data/historical-dam-capacity/",
+      "started_at": "2026-08-28T18:48:40.988380Z",
+      "finished_at": "2026-08-28T18:48:41.257535Z",
+      "duration_seconds": 0.269
     },
     {
       "source": "sunwater_current_page",
@@ -54,10 +54,10 @@
       "records": 0,
       "dams": 0,
       "newest_observation": null,
-      "message": "Page.goto: Timeout 90000ms exceeded.\nCall log:\n  - navigating to \"https://www.sunwater.com.au/dams/\", waiting until \"networkidle\"\n",
-      "started_at": "2026-08-28T05:29:27.422605Z",
-      "finished_at": "2026-08-28T05:30:57.977163Z",
-      "duration_seconds": 90.555
+      "message": "The rendered Sunwater current page contained no parseable dam capacities",
+      "started_at": "2026-08-28T18:48:41.257571Z",
+      "finished_at": "2026-08-28T18:48:45.719970Z",
+      "duration_seconds": 4.462
     }
   ]
 }
