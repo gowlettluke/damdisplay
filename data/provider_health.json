@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-28T18:48:25.637293Z",
-  "overall_status": "failed",
-  "required_source_failure_count": 1,
+  "generated_at": "2026-08-29T02:16:43.548163Z",
+  "overall_status": "degraded",
+  "required_source_failure_count": 0,
   "sources": [
     {
       "source": "seqwater_current_page",
@@ -11,11 +11,11 @@
       "status": "ok",
       "records": 25,
       "dams": 25,
-      "newest_observation": "2026-08-28T18:01:00Z",
+      "newest_observation": "2026-08-29T00:50:00Z",
       "message": null,
-      "started_at": "2026-08-28T18:48:36.680123Z",
-      "finished_at": "2026-08-28T18:48:37.296775Z",
-      "duration_seconds": 0.617
+      "started_at": "2026-08-29T02:16:54.883785Z",
+      "finished_at": "2026-08-29T02:16:55.479650Z",
+      "duration_seconds": 0.596
     },
     {
       "source": "seqwater_history",
@@ -23,27 +23,27 @@
       "role": "history_primary",
       "required": true,
       "status": "ok",
-      "records": 130,
+      "records": 104,
       "dams": 25,
       "newest_observation": "2026-08-28T14:00:00Z",
-      "message": "history_mode=incremental; start_date=2026-08-25",
-      "started_at": "2026-08-28T18:48:37.296801Z",
-      "finished_at": "2026-08-28T18:48:40.988333Z",
-      "duration_seconds": 3.692
+      "message": "history_mode=incremental; start_date=2026-08-26",
+      "started_at": "2026-08-29T02:16:55.479676Z",
+      "finished_at": "2026-08-29T02:16:58.644940Z",
+      "duration_seconds": 3.165
     },
     {
       "source": "sunwater_api",
       "provider": "Sunwater",
       "role": "current_and_history_primary",
       "required": true,
-      "status": "failed",
-      "records": 0,
-      "dams": 0,
-      "newest_observation": null,
-      "message": "403 Client Error: Forbidden for url: https://www.sunwater.com.au/water-data/historical-dam-capacity/",
-      "started_at": "2026-08-28T18:48:40.988380Z",
-      "finished_at": "2026-08-28T18:48:41.257535Z",
-      "duration_seconds": 0.269
+      "status": "ok",
+      "records": 97011,
+      "dams": 20,
+      "newest_observation": "2026-08-29T02:00:00Z",
+      "message": "history_mode=incremental; starts=110014A:2025-07-24, 120016A:2026-08-25, 120211A:2026-08-25, 122010A:2026-08-25, +16 stations",
+      "started_at": "2026-08-29T02:16:58.644991Z",
+      "finished_at": "2026-08-29T02:18:05.403747Z",
+      "duration_seconds": 66.759
     },
     {
       "source": "sunwater_current_page",
@@ -54,10 +54,10 @@
       "records": 0,
       "dams": 0,
       "newest_observation": null,
-      "message": "The rendered Sunwater current page contained no parseable dam capacities",
-      "started_at": "2026-08-28T18:48:41.257571Z",
-      "finished_at": "2026-08-28T18:48:45.719970Z",
-      "duration_seconds": 4.462
+      "message": "Page.goto: Timeout 90000ms exceeded.\nCall log:\n  - navigating to \"https://www.sunwater.com.au/dams/\", waiting until \"networkidle\"\n",
+      "started_at": "2026-08-29T02:18:05.403917Z",
+      "finished_at": "2026-08-29T02:19:36.557434Z",
+      "duration_seconds": 91.154
     }
   ]
 }
