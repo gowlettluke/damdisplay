@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T08:18:24.092540Z",
+  "generated_at": "2026-09-27T14:44:02.806986Z",
   "timezone": "Australia/Brisbane",
   "history_collection": {
     "seqwater_mode": "incremental",
@@ -19,11 +19,11 @@
   ],
   "summaries": {
     "dams_reporting": 45,
-    "median_capacity_percent": 87.5,
-    "stored_volume_ml": 6762688.59,
-    "rising_7d": 2,
+    "median_capacity_percent": 87.2,
+    "stored_volume_ml": 6763667.84,
+    "rising_7d": 1,
     "falling_7d": 42,
-    "stable_7d": 1,
+    "stable_7d": 2,
     "at_or_above_100_percent": 1,
     "capacity_bands": {
       "0_25": 3,
@@ -35,15 +35,15 @@
     "by_operator": {
       "Seqwater": {
         "dams_reporting": 25,
-        "median_capacity_percent": 87.5,
-        "stored_volume_ml": 2082818.0,
-        "rising_7d": 2,
+        "median_capacity_percent": 87.2,
+        "stored_volume_ml": 2085227.0,
+        "rising_7d": 1,
         "falling_7d": 23
       },
       "Sunwater": {
         "dams_reporting": 20,
-        "median_capacity_percent": 88.56,
-        "stored_volume_ml": 4679870.59,
+        "median_capacity_percent": 88.57,
+        "stored_volume_ml": 4678440.84,
         "rising_7d": 0,
         "falling_7d": 19
       }
@@ -54,11 +54,11 @@
       "dam_id": "seq-water-grid",
       "dam_name": "SEQ Water Grid",
       "operator": "Seqwater",
-      "observed_at": "2026-09-26T14:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:00:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "date",
       "capacity_percent": 80.0,
-      "volume_ml": 1761243.2465369613,
+      "volume_ml": 1762652.2899400478,
       "storage_level_m": null,
       "rainfall_mm": null,
       "flow_cms": null,
@@ -8150,8 +8150,25 @@
         "observed_at": "2026-09-26T14:00:00Z",
         "observation_date": "2026-09-27",
         "observation_precision": "date",
+        "capacity_percent": 80.1,
+        "volume_ml": 1763784.8224714852,
+        "storage_level_m": null,
+        "rainfall_mm": null,
+        "flow_cms": null,
+        "total_flow_ml": null,
+        "river_level_m": null,
+        "source": "seqwater_history",
+        "source_url": "https://www.seqwater.com.au/historic-dam-levels"
+      },
+      {
+        "dam_id": "seq-water-grid",
+        "dam_name": "SEQ Water Grid",
+        "operator": "Seqwater",
+        "observed_at": "2026-09-27T14:00:00Z",
+        "observation_date": "2026-09-28",
+        "observation_precision": "date",
         "capacity_percent": 80.0,
-        "volume_ml": 1761243.2465369613,
+        "volume_ml": 1762652.2899400478,
         "storage_level_m": null,
         "rainfall_mm": null,
         "flow_cms": null,
@@ -8167,10 +8184,10 @@
       "dam_id": "atkinson-dam",
       "dam_name": "Atkinson Dam",
       "operator": "Seqwater",
-      "capacity_percent": 61.4,
+      "capacity_percent": 61.3,
       "full_supply_volume_ml": 30401.0,
-      "volume_ml": 18675.0,
-      "observed_at": "2026-09-27T06:50:00Z",
+      "volume_ml": 18649.0,
+      "observed_at": "2026-09-27T12:50:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -8191,21 +8208,15 @@
       ],
       "change_24h_percentage_points": 0.0,
       "comparison_24h_at": "2026-09-26T14:00:00Z",
-      "change_7d_percentage_points": -1.1,
+      "change_7d_percentage_points": -1.2,
       "comparison_7d_at": "2026-09-20T14:00:00Z",
-      "change_30d_percentage_points": -4.7,
+      "change_30d_percentage_points": -4.8,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 88.4,
+      "data_age_minutes": 114.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 73.3,
-          "volume_ml": 22270.002584351,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 73.2,
@@ -8736,8 +8747,14 @@
         },
         {
           "observed_at": "2026-09-26T14:00:00Z",
-          "capacity_percent": 61.4,
-          "volume_ml": 18675.009155611,
+          "capacity_percent": 61.3,
+          "volume_ml": 18649.413993903,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 61.3,
+          "volume_ml": 18645.149359376,
           "storage_level_m": null
         }
       ]
@@ -8748,8 +8765,8 @@
       "operator": "Seqwater",
       "capacity_percent": 93.2,
       "full_supply_volume_ml": 61000.0,
-      "volume_ml": 56871.0,
-      "observed_at": "2026-09-27T07:00:00Z",
+      "volume_ml": 56830.0,
+      "observed_at": "2026-09-27T13:00:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -8775,16 +8792,10 @@
       "change_30d_percentage_points": -3.5,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 78.4,
+      "data_age_minutes": 104.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 100.0,
-          "volume_ml": 61016.475974187,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 100.0,
@@ -9316,7 +9327,13 @@
         {
           "observed_at": "2026-09-26T14:00:00Z",
           "capacity_percent": 93.2,
-          "volume_ml": 56871.025576206,
+          "volume_ml": 56830.120172703,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 93.2,
+          "volume_ml": 56830.120172703,
           "storage_level_m": null
         }
       ]
@@ -9325,10 +9342,10 @@
       "dam_id": "bill-gunn-dam",
       "dam_name": "Bill Gunn Dam",
       "operator": "Seqwater",
-      "capacity_percent": 65.8,
+      "capacity_percent": 65.7,
       "full_supply_volume_ml": 6947.0,
-      "volume_ml": 4570.0,
-      "observed_at": "2026-09-27T06:00:00Z",
+      "volume_ml": 4564.0,
+      "observed_at": "2026-09-27T12:00:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -9352,21 +9369,15 @@
       ],
       "change_24h_percentage_points": 0.0,
       "comparison_24h_at": "2026-09-26T14:00:00Z",
-      "change_7d_percentage_points": -1.8,
+      "change_7d_percentage_points": -1.9,
       "comparison_7d_at": "2026-09-20T14:00:00Z",
-      "change_30d_percentage_points": -7.7,
+      "change_30d_percentage_points": -7.8,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 138.4,
+      "data_age_minutes": 164.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 82.4,
-          "volume_ml": 5725.768,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 82.4,
@@ -9897,8 +9908,14 @@
         },
         {
           "observed_at": "2026-09-26T14:00:00Z",
-          "capacity_percent": 65.8,
-          "volume_ml": 4570.289,
+          "capacity_percent": 65.7,
+          "volume_ml": 4563.721,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 65.7,
+          "volume_ml": 4563.721,
           "storage_level_m": null
         }
       ]
@@ -9910,7 +9927,7 @@
       "capacity_percent": 97.8,
       "full_supply_volume_ml": 46000.0,
       "volume_ml": 45004.0,
-      "observed_at": "2026-09-27T06:27:00Z",
+      "observed_at": "2026-09-27T12:27:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -9936,7 +9953,7 @@
       "change_30d_percentage_points": -1.3,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 111.4,
+      "data_age_minutes": 137.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
@@ -10486,10 +10503,10 @@
       "dam_id": "cedar-pocket-dam",
       "dam_name": "Cedar Pocket Dam",
       "operator": "Seqwater",
-      "capacity_percent": 87.5,
+      "capacity_percent": 87.2,
       "full_supply_volume_ml": 735.0,
-      "volume_ml": 643.0,
-      "observed_at": "2026-09-27T06:00:00Z",
+      "volume_ml": 641.0,
+      "observed_at": "2026-09-27T12:00:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -10510,21 +10527,15 @@
       ],
       "change_24h_percentage_points": 0.0,
       "comparison_24h_at": "2026-09-26T14:00:00Z",
-      "change_7d_percentage_points": -1.7,
+      "change_7d_percentage_points": -2.0,
       "comparison_7d_at": "2026-09-20T14:00:00Z",
-      "change_30d_percentage_points": -8.1,
+      "change_30d_percentage_points": -8.4,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 138.4,
+      "data_age_minutes": 164.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 100.5,
-          "volume_ml": 738.85352052981,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 100.4,
@@ -11055,8 +11066,14 @@
         },
         {
           "observed_at": "2026-09-26T14:00:00Z",
-          "capacity_percent": 87.5,
-          "volume_ml": 643.1135531218,
+          "capacity_percent": 87.2,
+          "volume_ml": 640.97613605611,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 87.2,
+          "volume_ml": 640.97613605611,
           "storage_level_m": null
         }
       ]
@@ -11068,7 +11085,7 @@
       "capacity_percent": 68.5,
       "full_supply_volume_ml": 24276.0,
       "volume_ml": 16619.0,
-      "observed_at": "2026-09-27T06:19:00Z",
+      "observed_at": "2026-09-27T12:19:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -11094,16 +11111,10 @@
       "change_30d_percentage_points": -5.7,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 119.4,
+      "data_age_minutes": 145.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 82.5,
-          "volume_ml": 20022.0,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 82.4,
@@ -11635,7 +11646,13 @@
         {
           "observed_at": "2026-09-26T14:00:00Z",
           "capacity_percent": 68.5,
-          "volume_ml": 16619.46,
+          "volume_ml": 16633.855,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 68.5,
+          "volume_ml": 16633.855,
           "storage_level_m": null
         }
       ]
@@ -11644,10 +11661,10 @@
       "dam_id": "cooloolabin-dam",
       "dam_name": "Cooloolabin Dam",
       "operator": "Seqwater",
-      "capacity_percent": 92.2,
+      "capacity_percent": 92.1,
       "full_supply_volume_ml": 8183.0,
-      "volume_ml": 7545.0,
-      "observed_at": "2026-09-27T06:00:00Z",
+      "volume_ml": 7537.0,
+      "observed_at": "2026-09-27T12:00:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -11668,21 +11685,15 @@
       ],
       "change_24h_percentage_points": 0.0,
       "comparison_24h_at": "2026-09-26T14:00:00Z",
-      "change_7d_percentage_points": -0.5,
+      "change_7d_percentage_points": -0.6,
       "comparison_7d_at": "2026-09-20T14:00:00Z",
-      "change_30d_percentage_points": -3.3,
+      "change_30d_percentage_points": -3.4,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 138.4,
+      "data_age_minutes": 164.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 97.4,
-          "volume_ml": 7966.66063728,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 97.4,
@@ -12213,8 +12224,14 @@
         },
         {
           "observed_at": "2026-09-26T14:00:00Z",
-          "capacity_percent": 92.2,
-          "volume_ml": 7545.0043538181,
+          "capacity_percent": 92.1,
+          "volume_ml": 7536.6706439166,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 92.1,
+          "volume_ml": 7536.6706439166,
           "storage_level_m": null
         }
       ]
@@ -12225,8 +12242,8 @@
       "operator": "Seqwater",
       "capacity_percent": 97.9,
       "full_supply_volume_ml": 4262.0,
-      "volume_ml": 4171.0,
-      "observed_at": "2026-09-27T06:00:00Z",
+      "volume_ml": 4172.0,
+      "observed_at": "2026-09-27T12:00:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -12252,16 +12269,10 @@
       "change_30d_percentage_points": -1.4,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 138.4,
+      "data_age_minutes": 164.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 100.7,
-          "volume_ml": 4290.592676058,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 100.6,
@@ -12793,7 +12804,13 @@
         {
           "observed_at": "2026-09-26T14:00:00Z",
           "capacity_percent": 97.9,
-          "volume_ml": 4170.9640744497,
+          "volume_ml": 4171.6263500332,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 97.9,
+          "volume_ml": 4171.6263500332,
           "storage_level_m": null
         }
       ]
@@ -12805,7 +12822,7 @@
       "capacity_percent": 92.9,
       "full_supply_volume_ml": 16587.0,
       "volume_ml": 15412.0,
-      "observed_at": "2026-09-27T06:00:00Z",
+      "observed_at": "2026-09-27T12:00:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -12831,16 +12848,10 @@
       "change_30d_percentage_points": -3.0,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 138.4,
+      "data_age_minutes": 164.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 100.3,
-          "volume_ml": 16629.078226131,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 100.2,
@@ -13372,7 +13383,13 @@
         {
           "observed_at": "2026-09-26T14:00:00Z",
           "capacity_percent": 92.9,
-          "volume_ml": 15412.312664418,
+          "volume_ml": 15408.81272782,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 92.9,
+          "volume_ml": 15415.812751203,
           "storage_level_m": null
         }
       ]
@@ -13384,7 +13401,7 @@
       "capacity_percent": 73.5,
       "full_supply_volume_ml": 801.0,
       "volume_ml": 589.0,
-      "observed_at": "2026-09-27T06:00:00Z",
+      "observed_at": "2026-09-27T12:00:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -13410,16 +13427,10 @@
       "change_30d_percentage_points": -5.1,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 138.4,
+      "data_age_minutes": 164.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 87.2,
-          "volume_ml": 698.86697465741,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 87.2,
@@ -13951,7 +13962,13 @@
         {
           "observed_at": "2026-09-26T14:00:00Z",
           "capacity_percent": 73.5,
-          "volume_ml": 588.84490578992,
+          "volume_ml": 588.45675821881,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 73.5,
+          "volume_ml": 588.45675821881,
           "storage_level_m": null
         }
       ]
@@ -13962,8 +13979,8 @@
       "operator": "Seqwater",
       "capacity_percent": 95.8,
       "full_supply_volume_ml": 310730.0,
-      "volume_ml": 297641.0,
-      "observed_at": "2026-09-27T06:04:00Z",
+      "volume_ml": 297627.0,
+      "observed_at": "2026-09-27T12:40:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -13989,16 +14006,10 @@
       "change_30d_percentage_points": -1.8,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 134.4,
+      "data_age_minutes": 124.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 100.5,
-          "volume_ml": 312346.6195046,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 100.5,
@@ -14530,7 +14541,13 @@
         {
           "observed_at": "2026-09-26T14:00:00Z",
           "capacity_percent": 95.8,
-          "volume_ml": 297640.86845139,
+          "volume_ml": 297754.71425542,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 95.8,
+          "volume_ml": 297754.71425542,
           "storage_level_m": null
         }
       ]
@@ -14539,10 +14556,10 @@
       "dam_id": "lake-macdonald-dam",
       "dam_name": "Lake Macdonald Dam",
       "operator": "Seqwater",
-      "capacity_percent": 39.2,
+      "capacity_percent": 39.1,
       "full_supply_volume_ml": 8018.0,
-      "volume_ml": 3147.0,
-      "observed_at": "2026-09-27T06:48:00Z",
+      "volume_ml": 3134.0,
+      "observed_at": "2026-09-27T12:48:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -14565,21 +14582,15 @@
       ],
       "change_24h_percentage_points": 0.0,
       "comparison_24h_at": "2026-09-26T14:00:00Z",
-      "change_7d_percentage_points": -0.3,
+      "change_7d_percentage_points": -0.4,
       "comparison_7d_at": "2026-09-20T14:00:00Z",
-      "change_30d_percentage_points": -0.3,
+      "change_30d_percentage_points": -0.4,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 90.4,
+      "data_age_minutes": 116.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 39.8,
-          "volume_ml": 3192.19,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 39.5,
@@ -15110,8 +15121,14 @@
         },
         {
           "observed_at": "2026-09-26T14:00:00Z",
-          "capacity_percent": 39.2,
-          "volume_ml": 3146.65,
+          "capacity_percent": 39.1,
+          "volume_ml": 3136.53,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 39.1,
+          "volume_ml": 3136.53,
           "storage_level_m": null
         }
       ]
@@ -15120,10 +15137,10 @@
       "dam_id": "lake-manchester-dam",
       "dam_name": "Lake Manchester Dam",
       "operator": "Seqwater",
-      "capacity_percent": 88.3,
+      "capacity_percent": 88.2,
       "full_supply_volume_ml": 26217.0,
-      "volume_ml": 23141.0,
-      "observed_at": "2026-09-27T06:00:00Z",
+      "volume_ml": 23134.0,
+      "observed_at": "2026-09-27T12:00:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -15144,21 +15161,15 @@
       ],
       "change_24h_percentage_points": 0.0,
       "comparison_24h_at": "2026-09-26T14:00:00Z",
-      "change_7d_percentage_points": -0.1,
+      "change_7d_percentage_points": -0.2,
       "comparison_7d_at": "2026-09-20T14:00:00Z",
-      "change_30d_percentage_points": -0.8,
+      "change_30d_percentage_points": -0.9,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 138.4,
+      "data_age_minutes": 164.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 89.7,
-          "volume_ml": 23528.162572389,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 89.7,
@@ -15689,8 +15700,14 @@
         },
         {
           "observed_at": "2026-09-26T14:00:00Z",
-          "capacity_percent": 88.3,
-          "volume_ml": 23140.866205998,
+          "capacity_percent": 88.2,
+          "volume_ml": 23133.655317049,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 88.2,
+          "volume_ml": 23136.05873907,
           "storage_level_m": null
         }
       ]
@@ -15699,10 +15716,10 @@
       "dam_id": "leslie-harrison-dam",
       "dam_name": "Leslie Harrison Dam",
       "operator": "Seqwater",
-      "capacity_percent": 76.0,
+      "capacity_percent": 75.9,
       "full_supply_volume_ml": 13206.0,
-      "volume_ml": 10036.0,
-      "observed_at": "2026-09-27T07:00:00Z",
+      "volume_ml": 10029.0,
+      "observed_at": "2026-09-27T13:00:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -15723,21 +15740,15 @@
       ],
       "change_24h_percentage_points": 0.0,
       "comparison_24h_at": "2026-09-26T14:00:00Z",
-      "change_7d_percentage_points": -0.7,
+      "change_7d_percentage_points": -0.8,
       "comparison_7d_at": "2026-09-20T14:00:00Z",
-      "change_30d_percentage_points": -3.4,
+      "change_30d_percentage_points": -3.5,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 78.4,
+      "data_age_minutes": 104.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 97.6,
-          "volume_ml": 12889.451573201,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 97.3,
@@ -16268,8 +16279,14 @@
         },
         {
           "observed_at": "2026-09-26T14:00:00Z",
-          "capacity_percent": 76.0,
-          "volume_ml": 10036.208970975,
+          "capacity_percent": 75.9,
+          "volume_ml": 10029.142250689,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 75.9,
+          "volume_ml": 10024.433367159,
           "storage_level_m": null
         }
       ]
@@ -16278,10 +16295,10 @@
       "dam_id": "little-nerang-dam",
       "dam_name": "Little Nerang Dam",
       "operator": "Seqwater",
-      "capacity_percent": 83.4,
+      "capacity_percent": 83.3,
       "full_supply_volume_ml": 6705.0,
-      "volume_ml": 5590.0,
-      "observed_at": "2026-09-27T06:50:00Z",
+      "volume_ml": 5585.0,
+      "observed_at": "2026-09-27T12:50:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -16302,21 +16319,15 @@
       ],
       "change_24h_percentage_points": 0.0,
       "comparison_24h_at": "2026-09-26T14:00:00Z",
-      "change_7d_percentage_points": -1.6,
+      "change_7d_percentage_points": -1.7,
       "comparison_7d_at": "2026-09-20T14:00:00Z",
-      "change_30d_percentage_points": -4.2,
+      "change_30d_percentage_points": -4.3,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 88.4,
+      "data_age_minutes": 114.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 100.3,
-          "volume_ml": 6723.5060640835,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 100.3,
@@ -16847,8 +16858,14 @@
         },
         {
           "observed_at": "2026-09-26T14:00:00Z",
-          "capacity_percent": 83.4,
-          "volume_ml": 5590.4411593662,
+          "capacity_percent": 83.3,
+          "volume_ml": 5587.4071507869,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 83.3,
+          "volume_ml": 5586.9737762062,
           "storage_level_m": null
         }
       ]
@@ -16859,8 +16876,8 @@
       "operator": "Seqwater",
       "capacity_percent": 98.8,
       "full_supply_volume_ml": 44319.0,
-      "volume_ml": 43807.0,
-      "observed_at": "2026-09-27T06:00:00Z",
+      "volume_ml": 43796.0,
+      "observed_at": "2026-09-27T12:00:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -16886,16 +16903,10 @@
       "change_30d_percentage_points": -1.2,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 138.4,
+      "data_age_minutes": 164.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-28T14:00:00Z",
-          "capacity_percent": 100.1,
-          "volume_ml": 44345.97442044,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-29T14:00:00Z",
           "capacity_percent": 100.1,
@@ -17427,7 +17438,13 @@
         {
           "observed_at": "2026-09-26T14:00:00Z",
           "capacity_percent": 98.8,
-          "volume_ml": 43806.591239417,
+          "volume_ml": 43793.125017247,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 98.8,
+          "volume_ml": 43796.491404293,
           "storage_level_m": null
         }
       ]
@@ -17439,7 +17456,7 @@
       "capacity_percent": 77.4,
       "full_supply_volume_ml": 83765.0,
       "volume_ml": 64841.0,
-      "observed_at": "2026-09-27T07:00:00Z",
+      "observed_at": "2026-09-27T13:00:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -17465,16 +17482,10 @@
       "change_30d_percentage_points": -3.1,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 78.4,
+      "data_age_minutes": 104.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 83.6,
-          "volume_ml": 70008.227285354,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 83.6,
@@ -18008,6 +18019,12 @@
           "capacity_percent": 77.4,
           "volume_ml": 64840.952635667,
           "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 77.4,
+          "volume_ml": 64840.952635667,
+          "storage_level_m": null
         }
       ]
     },
@@ -18018,7 +18035,7 @@
       "capacity_percent": 93.9,
       "full_supply_volume_ml": 213.0,
       "volume_ml": 200.0,
-      "observed_at": "2026-09-27T07:00:00Z",
+      "observed_at": "2026-09-27T13:00:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -18044,16 +18061,10 @@
       "change_30d_percentage_points": -1.1,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 78.4,
+      "data_age_minutes": 104.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 96.3,
-          "volume_ml": 205.14485981308,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 96.3,
@@ -18585,7 +18596,13 @@
         {
           "observed_at": "2026-09-26T14:00:00Z",
           "capacity_percent": 94.0,
-          "volume_ml": 200.21028037383,
+          "volume_ml": 200.18457943925,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 94.0,
+          "volume_ml": 200.18457943925,
           "storage_level_m": null
         }
       ]
@@ -18597,7 +18614,7 @@
       "capacity_percent": 48.8,
       "full_supply_volume_ml": 214302.0,
       "volume_ml": 104532.0,
-      "observed_at": "2026-09-27T07:00:00Z",
+      "observed_at": "2026-09-27T13:00:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -18625,16 +18642,10 @@
       "change_30d_percentage_points": -1.6,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 78.4,
+      "data_age_minutes": 104.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 52.2,
-          "volume_ml": 111872.94424894,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 52.2,
@@ -19168,6 +19179,12 @@
           "capacity_percent": 48.8,
           "volume_ml": 104531.69047049,
           "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 48.8,
+          "volume_ml": 104531.69047049,
+          "storage_level_m": null
         }
       ]
     },
@@ -19178,7 +19195,7 @@
       "capacity_percent": 83.8,
       "full_supply_volume_ml": 655.0,
       "volume_ml": 549.0,
-      "observed_at": "2026-09-27T07:00:00Z",
+      "observed_at": "2026-09-27T13:00:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -19197,23 +19214,17 @@
         "Poona Dam",
         "Poona"
       ],
-      "change_24h_percentage_points": 0.0,
+      "change_24h_percentage_points": -0.1,
       "comparison_24h_at": "2026-09-26T14:00:00Z",
       "change_7d_percentage_points": 2.7,
       "comparison_7d_at": "2026-09-20T14:00:00Z",
       "change_30d_percentage_points": 6.0,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "rising",
-      "data_age_minutes": 78.4,
+      "data_age_minutes": 104.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 74.0,
-          "volume_ml": 484.65,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 73.5,
@@ -19744,8 +19755,14 @@
         },
         {
           "observed_at": "2026-09-26T14:00:00Z",
-          "capacity_percent": 83.8,
-          "volume_ml": 548.84,
+          "capacity_percent": 83.9,
+          "volume_ml": 549.48,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 83.9,
+          "volume_ml": 549.48,
           "storage_level_m": null
         }
       ]
@@ -19756,8 +19773,8 @@
       "operator": "Seqwater",
       "capacity_percent": 96.4,
       "full_supply_volume_ml": 14192.0,
-      "volume_ml": 13682.0,
-      "observed_at": "2026-09-27T06:00:00Z",
+      "volume_ml": 13675.0,
+      "observed_at": "2026-09-27T12:00:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -19785,16 +19802,10 @@
       "change_30d_percentage_points": -2.4,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 138.4,
+      "data_age_minutes": 164.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 101.0,
-          "volume_ml": 14337.444018849,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 101.0,
@@ -20326,7 +20337,13 @@
         {
           "observed_at": "2026-09-26T14:00:00Z",
           "capacity_percent": 96.4,
-          "volume_ml": 13681.756629628,
+          "volume_ml": 13675.07963152,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 96.4,
+          "volume_ml": 13675.07963152,
           "storage_level_m": null
         }
       ]
@@ -20335,10 +20352,10 @@
       "dam_id": "somerset-dam",
       "dam_name": "Somerset Dam",
       "operator": "Seqwater",
-      "capacity_percent": 79.1,
+      "capacity_percent": 79.0,
       "full_supply_volume_ml": 379849.0,
-      "volume_ml": 300303.0,
-      "observed_at": "2026-09-27T07:00:00Z",
+      "volume_ml": 300129.0,
+      "observed_at": "2026-09-27T13:00:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -20359,21 +20376,15 @@
       ],
       "change_24h_percentage_points": 0.0,
       "comparison_24h_at": "2026-09-26T14:00:00Z",
-      "change_7d_percentage_points": -0.4,
+      "change_7d_percentage_points": -0.5,
       "comparison_7d_at": "2026-09-20T14:00:00Z",
-      "change_30d_percentage_points": -0.5,
+      "change_30d_percentage_points": -0.6,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 78.4,
+      "data_age_minutes": 104.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 79.2,
-          "volume_ml": 300964.99247429,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 79.3,
@@ -20904,8 +20915,14 @@
         },
         {
           "observed_at": "2026-09-26T14:00:00Z",
-          "capacity_percent": 79.1,
-          "volume_ml": 300302.64397683,
+          "capacity_percent": 79.0,
+          "volume_ml": 300128.54840091,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 79.0,
+          "volume_ml": 299954.53906029,
           "storage_level_m": null
         }
       ]
@@ -20914,10 +20931,10 @@
       "dam_id": "wappa-dam",
       "dam_name": "Wappa Dam",
       "operator": "Seqwater",
-      "capacity_percent": 100.4,
+      "capacity_percent": 100.3,
       "full_supply_volume_ml": 4694.0,
-      "volume_ml": 4711.0,
-      "observed_at": "2026-09-27T07:00:00Z",
+      "volume_ml": 4710.0,
+      "observed_at": "2026-09-27T12:18:00Z",
       "observation_precision": "datetime",
       "information": "Dam is spilling",
       "source": "seqwater_current_page",
@@ -20936,23 +20953,17 @@
         "Wappa Dam",
         "Wappa"
       ],
-      "change_24h_percentage_points": 0.0,
+      "change_24h_percentage_points": -0.1,
       "comparison_24h_at": "2026-09-26T14:00:00Z",
-      "change_7d_percentage_points": 0.1,
+      "change_7d_percentage_points": 0.0,
       "comparison_7d_at": "2026-09-20T14:00:00Z",
-      "change_30d_percentage_points": 0.0,
+      "change_30d_percentage_points": -0.1,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
-      "trend_7d": "rising",
-      "data_age_minutes": 78.4,
+      "trend_7d": "stable",
+      "data_age_minutes": 146.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 100.7,
-          "volume_ml": 4728.3137130332,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 100.7,
@@ -21484,7 +21495,13 @@
         {
           "observed_at": "2026-09-26T14:00:00Z",
           "capacity_percent": 100.4,
-          "volume_ml": 4711.1261917746,
+          "volume_ml": 4710.6009209258,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 100.4,
+          "volume_ml": 4710.6009209258,
           "storage_level_m": null
         }
       ]
@@ -21493,10 +21510,10 @@
       "dam_id": "wivenhoe-dam",
       "dam_name": "Wivenhoe Dam",
       "operator": "Seqwater",
-      "capacity_percent": 80.8,
+      "capacity_percent": 81.1,
       "full_supply_volume_ml": 1165240.0,
-      "volume_ml": 941791.0,
-      "observed_at": "2026-09-27T07:00:00Z",
+      "volume_ml": 944509.0,
+      "observed_at": "2026-09-27T13:00:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -21517,21 +21534,15 @@
       ],
       "change_24h_percentage_points": 0.0,
       "comparison_24h_at": "2026-09-26T14:00:00Z",
-      "change_7d_percentage_points": -1.2,
+      "change_7d_percentage_points": -0.9,
       "comparison_7d_at": "2026-09-20T14:00:00Z",
-      "change_30d_percentage_points": -2.4,
+      "change_30d_percentage_points": -2.1,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 78.4,
+      "data_age_minutes": 104.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 86.9,
-          "volume_ml": 1012545.9581469,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 86.8,
@@ -22062,8 +22073,14 @@
         },
         {
           "observed_at": "2026-09-26T14:00:00Z",
-          "capacity_percent": 80.8,
-          "volume_ml": 941790.64428384,
+          "capacity_percent": 81.1,
+          "volume_ml": 944472.10676723,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 81.0,
+          "volume_ml": 943511.72581114,
           "storage_level_m": null
         }
       ]
@@ -22074,8 +22091,8 @@
       "operator": "Seqwater",
       "capacity_percent": 96.0,
       "full_supply_volume_ml": 102883.0,
-      "volume_ml": 98748.0,
-      "observed_at": "2026-09-27T07:00:00Z",
+      "volume_ml": 98760.0,
+      "observed_at": "2026-09-27T13:00:00Z",
       "observation_precision": "datetime",
       "information": null,
       "source": "seqwater_current_page",
@@ -22101,16 +22118,10 @@
       "change_30d_percentage_points": -1.1,
       "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 78.4,
+      "data_age_minutes": 104.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-06-29T14:00:00Z",
-          "capacity_percent": 98.4,
-          "volume_ml": 101231.87473188,
-          "storage_level_m": null
-        },
         {
           "observed_at": "2026-06-30T14:00:00Z",
           "capacity_percent": 98.4,
@@ -22642,7 +22653,13 @@
         {
           "observed_at": "2026-09-26T14:00:00Z",
           "capacity_percent": 96.0,
-          "volume_ml": 98748.115864606,
+          "volume_ml": 98759.897769888,
+          "storage_level_m": null
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 96.0,
+          "volume_ml": 98759.897769888,
           "storage_level_m": null
         }
       ]
@@ -22653,8 +22670,8 @@
       "operator": "Sunwater",
       "station_code": "136210A",
       "site_id": 2279,
-      "observed_at": "2026-09-27T07:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:00:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "datetime",
       "capacity_percent": 92.5,
       "volume_ml": 124783.478,
@@ -22683,59 +22700,17 @@
         "Bjelke Petersen",
         "Bjelke Petersen Dam"
       ],
-      "change_24h_percentage_points": -0.14,
-      "comparison_24h_at": "2026-09-26T07:00:00Z",
-      "change_7d_percentage_points": -1.07,
-      "comparison_7d_at": "2026-09-20T07:00:00Z",
+      "change_24h_percentage_points": -0.16,
+      "comparison_24h_at": "2026-09-26T14:00:00Z",
+      "change_7d_percentage_points": -1.05,
+      "comparison_7d_at": "2026-09-20T14:00:00Z",
       "change_30d_percentage_points": -3.17,
-      "comparison_30d_at": "2026-08-28T07:00:00Z",
+      "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 78.4,
+      "data_age_minutes": 44.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-23T18:00:00Z",
-          "capacity_percent": 93.07,
-          "volume_ml": 125556.297,
-          "storage_level_m": 306.873
-        },
-        {
-          "observed_at": "2026-09-23T19:00:00Z",
-          "capacity_percent": 93.07,
-          "volume_ml": 125556.297,
-          "storage_level_m": 306.873
-        },
-        {
-          "observed_at": "2026-09-23T20:00:00Z",
-          "capacity_percent": 93.04,
-          "volume_ml": 125513.266,
-          "storage_level_m": 306.871
-        },
-        {
-          "observed_at": "2026-09-23T21:00:00Z",
-          "capacity_percent": 93.06,
-          "volume_ml": 125534.78,
-          "storage_level_m": 306.872
-        },
-        {
-          "observed_at": "2026-09-23T22:00:00Z",
-          "capacity_percent": 93.04,
-          "volume_ml": 125513.266,
-          "storage_level_m": 306.871
-        },
-        {
-          "observed_at": "2026-09-23T23:00:00Z",
-          "capacity_percent": 93.06,
-          "volume_ml": 125534.78,
-          "storage_level_m": 306.872
-        },
-        {
-          "observed_at": "2026-09-24T00:00:00Z",
-          "capacity_percent": 93.04,
-          "volume_ml": 125513.266,
-          "storage_level_m": 306.871
-        },
         {
           "observed_at": "2026-09-24T01:00:00Z",
           "capacity_percent": 93.04,
@@ -23233,6 +23208,48 @@
           "capacity_percent": 92.5,
           "volume_ml": 124783.478,
           "storage_level_m": 306.837
+        },
+        {
+          "observed_at": "2026-09-27T08:00:00Z",
+          "capacity_percent": 92.52,
+          "volume_ml": 124804.895,
+          "storage_level_m": 306.838
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 92.52,
+          "volume_ml": 124804.895,
+          "storage_level_m": 306.838
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 92.5,
+          "volume_ml": 124783.478,
+          "storage_level_m": 306.837
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 92.5,
+          "volume_ml": 124783.478,
+          "storage_level_m": 306.837
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 92.53,
+          "volume_ml": 124826.316,
+          "storage_level_m": 306.839
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 92.53,
+          "volume_ml": 124826.316,
+          "storage_level_m": 306.839
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 92.5,
+          "volume_ml": 124783.478,
+          "storage_level_m": 306.837
         }
       ]
     },
@@ -23242,12 +23259,12 @@
       "operator": "Sunwater",
       "station_code": "136316A",
       "site_id": 2295,
-      "observed_at": "2026-09-27T07:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:00:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "datetime",
-      "capacity_percent": 89.4,
-      "volume_ml": 182557.984,
-      "storage_level_m": 279.128,
+      "capacity_percent": 89.39,
+      "volume_ml": 182524.578,
+      "storage_level_m": 279.126,
       "rainfall_mm": 0.0,
       "flow_cms": 0.0,
       "total_flow_ml": 0.0,
@@ -23255,7 +23272,7 @@
       "source": "sunwater_api",
       "source_url": "https://data.sunwater.com.au/api/Sites/136316A/data",
       "information": null,
-      "full_supply_volume_ml": 204203.562,
+      "full_supply_volume_ml": 204189.035,
       "full_supply_volume_basis": "derived_from_current_volume_and_percentage",
       "latitude": -26.1333709,
       "longitude": 151.4290217,
@@ -23270,59 +23287,17 @@
         "Boondooma Dam",
         "Boondooma"
       ],
-      "change_24h_percentage_points": -0.1,
-      "comparison_24h_at": "2026-09-26T07:00:00Z",
-      "change_7d_percentage_points": -0.67,
-      "comparison_7d_at": "2026-09-20T07:00:00Z",
+      "change_24h_percentage_points": -0.09,
+      "comparison_24h_at": "2026-09-26T14:00:00Z",
+      "change_7d_percentage_points": -0.66,
+      "comparison_7d_at": "2026-09-20T14:00:00Z",
       "change_30d_percentage_points": -2.31,
-      "comparison_30d_at": "2026-08-28T07:00:00Z",
+      "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 78.4,
+      "data_age_minutes": 44.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-23T14:00:00Z",
-          "capacity_percent": 89.74,
-          "volume_ml": 183242.807,
-          "storage_level_m": 279.169
-        },
-        {
-          "observed_at": "2026-09-23T15:00:00Z",
-          "capacity_percent": 89.75,
-          "volume_ml": 183259.51,
-          "storage_level_m": 279.17
-        },
-        {
-          "observed_at": "2026-09-23T16:00:00Z",
-          "capacity_percent": 89.75,
-          "volume_ml": 183259.51,
-          "storage_level_m": 279.17
-        },
-        {
-          "observed_at": "2026-09-23T17:00:00Z",
-          "capacity_percent": 89.75,
-          "volume_ml": 183259.51,
-          "storage_level_m": 279.17
-        },
-        {
-          "observed_at": "2026-09-23T18:00:00Z",
-          "capacity_percent": 89.75,
-          "volume_ml": 183259.51,
-          "storage_level_m": 279.17
-        },
-        {
-          "observed_at": "2026-09-23T19:00:00Z",
-          "capacity_percent": 89.74,
-          "volume_ml": 183242.807,
-          "storage_level_m": 279.169
-        },
-        {
-          "observed_at": "2026-09-23T20:00:00Z",
-          "capacity_percent": 89.75,
-          "volume_ml": 183276.213,
-          "storage_level_m": 279.171
-        },
         {
           "observed_at": "2026-09-23T21:00:00Z",
           "capacity_percent": 89.74,
@@ -23820,6 +23795,48 @@
           "capacity_percent": 89.4,
           "volume_ml": 182557.984,
           "storage_level_m": 279.128
+        },
+        {
+          "observed_at": "2026-09-27T08:00:00Z",
+          "capacity_percent": 89.39,
+          "volume_ml": 182541.281,
+          "storage_level_m": 279.127
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 89.4,
+          "volume_ml": 182557.984,
+          "storage_level_m": 279.128
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 89.39,
+          "volume_ml": 182541.281,
+          "storage_level_m": 279.127
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 89.39,
+          "volume_ml": 182524.578,
+          "storage_level_m": 279.126
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 89.39,
+          "volume_ml": 182541.281,
+          "storage_level_m": 279.127
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 89.39,
+          "volume_ml": 182524.578,
+          "storage_level_m": 279.126
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 89.39,
+          "volume_ml": 182524.578,
+          "storage_level_m": 279.126
         }
       ]
     },
@@ -23829,12 +23846,12 @@
       "operator": "Sunwater",
       "station_code": "120016A",
       "site_id": 2037,
-      "observed_at": "2026-09-27T08:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:00:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "datetime",
-      "capacity_percent": 86.7,
-      "volume_ml": 1612587.854,
-      "storage_level_m": 152.797,
+      "capacity_percent": 86.67,
+      "volume_ml": 1612005.872,
+      "storage_level_m": 152.794,
       "rainfall_mm": 0.0,
       "flow_cms": 0.0,
       "total_flow_ml": 0.0,
@@ -23842,7 +23859,7 @@
       "source": "sunwater_api",
       "source_url": "https://data.sunwater.com.au/api/Sites/120016A/data",
       "information": null,
-      "full_supply_volume_ml": 1859962.923,
+      "full_supply_volume_ml": 1859935.239,
       "full_supply_volume_basis": "derived_from_current_volume_and_percentage",
       "latitude": -20.6297678,
       "longitude": 147.0102994,
@@ -23858,77 +23875,17 @@
         "Burdekin Falls",
         "Burdekin Dam"
       ],
-      "change_24h_percentage_points": -0.18,
-      "comparison_24h_at": "2026-09-26T08:00:00Z",
-      "change_7d_percentage_points": -1.34,
-      "comparison_7d_at": "2026-09-20T08:00:00Z",
-      "change_30d_percentage_points": -4.77,
-      "comparison_30d_at": "2026-08-28T08:00:00Z",
+      "change_24h_percentage_points": -0.17,
+      "comparison_24h_at": "2026-09-26T14:00:00Z",
+      "change_7d_percentage_points": -1.19,
+      "comparison_7d_at": "2026-09-20T14:00:00Z",
+      "change_30d_percentage_points": -4.76,
+      "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 18.4,
+      "data_age_minutes": 44.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-25T08:00:00Z",
-          "capacity_percent": 87.03,
-          "volume_ml": 1618811.075,
-          "storage_level_m": 152.829
-        },
-        {
-          "observed_at": "2026-09-25T08:35:00Z",
-          "capacity_percent": 87.15,
-          "volume_ml": 1620954.844,
-          "storage_level_m": 152.84
-        },
-        {
-          "observed_at": "2026-09-25T09:00:00Z",
-          "capacity_percent": 87.09,
-          "volume_ml": 1619785.239,
-          "storage_level_m": 152.834
-        },
-        {
-          "observed_at": "2026-09-25T09:35:00Z",
-          "capacity_percent": 87.19,
-          "volume_ml": 1621734.949,
-          "storage_level_m": 152.844
-        },
-        {
-          "observed_at": "2026-09-25T09:40:00Z",
-          "capacity_percent": 87.0,
-          "volume_ml": 1618226.797,
-          "storage_level_m": 152.826
-        },
-        {
-          "observed_at": "2026-09-25T09:55:00Z",
-          "capacity_percent": 87.13,
-          "volume_ml": 1620564.902,
-          "storage_level_m": 152.838
-        },
-        {
-          "observed_at": "2026-09-25T10:00:00Z",
-          "capacity_percent": 87.01,
-          "volume_ml": 1618421.538,
-          "storage_level_m": 152.827
-        },
-        {
-          "observed_at": "2026-09-25T10:50:00Z",
-          "capacity_percent": 86.88,
-          "volume_ml": 1615891.345,
-          "storage_level_m": 152.814
-        },
-        {
-          "observed_at": "2026-09-25T10:55:00Z",
-          "capacity_percent": 86.99,
-          "volume_ml": 1618032.075,
-          "storage_level_m": 152.825
-        },
-        {
-          "observed_at": "2026-09-25T11:00:00Z",
-          "capacity_percent": 87.01,
-          "volume_ml": 1618421.538,
-          "storage_level_m": 152.827
-        },
         {
           "observed_at": "2026-09-25T12:00:00Z",
           "capacity_percent": 87.09,
@@ -24408,6 +24365,66 @@
           "capacity_percent": 86.7,
           "volume_ml": 1612587.854,
           "storage_level_m": 152.797
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 86.66,
+          "volume_ml": 1611811.915,
+          "storage_level_m": 152.793
+        },
+        {
+          "observed_at": "2026-09-27T09:10:00Z",
+          "capacity_percent": 86.79,
+          "volume_ml": 1614335.849,
+          "storage_level_m": 152.806
+        },
+        {
+          "observed_at": "2026-09-27T09:20:00Z",
+          "capacity_percent": 86.63,
+          "volume_ml": 1611230.154,
+          "storage_level_m": 152.79
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 86.55,
+          "volume_ml": 1609873.353,
+          "storage_level_m": 152.783
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 86.58,
+          "volume_ml": 1610454.729,
+          "storage_level_m": 152.786
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 86.6,
+          "volume_ml": 1610842.405,
+          "storage_level_m": 152.788
+        },
+        {
+          "observed_at": "2026-09-27T12:40:00Z",
+          "capacity_percent": 86.72,
+          "volume_ml": 1612975.933,
+          "storage_level_m": 152.799
+        },
+        {
+          "observed_at": "2026-09-27T12:55:00Z",
+          "capacity_percent": 86.6,
+          "volume_ml": 1610842.405,
+          "storage_level_m": 152.788
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 86.6,
+          "volume_ml": 1610842.405,
+          "storage_level_m": 152.788
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 86.67,
+          "volume_ml": 1612005.872,
+          "storage_level_m": 152.794
         }
       ]
     },
@@ -24417,12 +24434,12 @@
       "operator": "Sunwater",
       "station_code": "130314A",
       "site_id": 2164,
-      "observed_at": "2026-09-27T07:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:00:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "datetime",
-      "capacity_percent": 20.72,
-      "volume_ml": 26733.385,
-      "storage_level_m": 202.308,
+      "capacity_percent": 20.68,
+      "volume_ml": 26690.701,
+      "storage_level_m": 202.298,
       "rainfall_mm": 0.0,
       "flow_cms": 0.0,
       "total_flow_ml": 0.0,
@@ -24430,7 +24447,7 @@
       "source": "sunwater_api",
       "source_url": "https://data.sunwater.com.au/api/Sites/130314B/data",
       "information": null,
-      "full_supply_volume_ml": 129022.128,
+      "full_supply_volume_ml": 129065.285,
       "full_supply_volume_basis": "derived_from_current_volume_and_percentage",
       "latitude": -24.368021,
       "longitude": 150.6158279,
@@ -24445,59 +24462,17 @@
         "Callide Dam Intake",
         "Callide Dam"
       ],
-      "change_24h_percentage_points": -0.05,
-      "comparison_24h_at": "2026-09-26T07:00:00Z",
-      "change_7d_percentage_points": -0.39,
-      "comparison_7d_at": "2026-09-20T07:00:00Z",
-      "change_30d_percentage_points": -1.53,
-      "comparison_30d_at": "2026-08-28T07:00:00Z",
+      "change_24h_percentage_points": -0.06,
+      "comparison_24h_at": "2026-09-26T14:00:00Z",
+      "change_7d_percentage_points": -0.4,
+      "comparison_7d_at": "2026-09-20T14:00:00Z",
+      "change_30d_percentage_points": -1.54,
+      "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 78.4,
+      "data_age_minutes": 44.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-23T14:00:00Z",
-          "capacity_percent": 20.9,
-          "volume_ml": 26968.982,
-          "storage_level_m": 202.363
-        },
-        {
-          "observed_at": "2026-09-23T15:00:00Z",
-          "capacity_percent": 20.9,
-          "volume_ml": 26964.686,
-          "storage_level_m": 202.362
-        },
-        {
-          "observed_at": "2026-09-23T16:00:00Z",
-          "capacity_percent": 20.89,
-          "volume_ml": 26960.39,
-          "storage_level_m": 202.361
-        },
-        {
-          "observed_at": "2026-09-23T17:00:00Z",
-          "capacity_percent": 20.89,
-          "volume_ml": 26960.39,
-          "storage_level_m": 202.361
-        },
-        {
-          "observed_at": "2026-09-23T18:00:00Z",
-          "capacity_percent": 20.89,
-          "volume_ml": 26960.39,
-          "storage_level_m": 202.361
-        },
-        {
-          "observed_at": "2026-09-23T19:00:00Z",
-          "capacity_percent": 20.89,
-          "volume_ml": 26956.095,
-          "storage_level_m": 202.36
-        },
-        {
-          "observed_at": "2026-09-23T20:00:00Z",
-          "capacity_percent": 20.89,
-          "volume_ml": 26956.095,
-          "storage_level_m": 202.36
-        },
         {
           "observed_at": "2026-09-23T21:00:00Z",
           "capacity_percent": 20.89,
@@ -24995,6 +24970,48 @@
           "capacity_percent": 20.72,
           "volume_ml": 26733.385,
           "storage_level_m": 202.308
+        },
+        {
+          "observed_at": "2026-09-27T08:00:00Z",
+          "capacity_percent": 20.71,
+          "volume_ml": 26720.575,
+          "storage_level_m": 202.305
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 20.7,
+          "volume_ml": 26712.037,
+          "storage_level_m": 202.303
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 20.7,
+          "volume_ml": 26712.037,
+          "storage_level_m": 202.303
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 20.69,
+          "volume_ml": 26703.502,
+          "storage_level_m": 202.301
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 20.69,
+          "volume_ml": 26694.968,
+          "storage_level_m": 202.299
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 20.69,
+          "volume_ml": 26694.968,
+          "storage_level_m": 202.299
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 20.68,
+          "volume_ml": 26690.701,
+          "storage_level_m": 202.298
         }
       ]
     },
@@ -25004,12 +25021,12 @@
       "operator": "Sunwater",
       "station_code": "136115A",
       "site_id": 2257,
-      "observed_at": "2026-09-27T08:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:00:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "datetime",
-      "capacity_percent": 23.48,
-      "volume_ml": 20801.844,
-      "storage_level_m": 317.226,
+      "capacity_percent": 23.45,
+      "volume_ml": 20768.894,
+      "storage_level_m": 317.214,
       "rainfall_mm": 0.0,
       "flow_cms": 0.0,
       "total_flow_ml": 0.0,
@@ -25017,7 +25034,7 @@
       "source": "sunwater_api",
       "source_url": "https://data.sunwater.com.au/api/Sites/136115A/data",
       "information": null,
-      "full_supply_volume_ml": 88593.884,
+      "full_supply_volume_ml": 88566.712,
       "full_supply_volume_basis": "derived_from_current_volume_and_percentage",
       "latitude": -24.649423,
       "longitude": 150.9849903,
@@ -25032,53 +25049,17 @@
         "Cania Dam",
         "Cania"
       ],
-      "change_24h_percentage_points": -0.18,
-      "comparison_24h_at": "2026-09-26T08:00:00Z",
-      "change_7d_percentage_points": -1.18,
-      "comparison_7d_at": "2026-09-20T08:00:00Z",
-      "change_30d_percentage_points": -3.55,
-      "comparison_30d_at": "2026-08-28T08:00:00Z",
+      "change_24h_percentage_points": -0.16,
+      "comparison_24h_at": "2026-09-26T14:00:00Z",
+      "change_7d_percentage_points": -1.17,
+      "comparison_7d_at": "2026-09-20T14:00:00Z",
+      "change_30d_percentage_points": -3.58,
+      "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 18.4,
+      "data_age_minutes": 44.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-23T15:00:00Z",
-          "capacity_percent": 24.1,
-          "volume_ml": 21350.997,
-          "storage_level_m": 317.424
-        },
-        {
-          "observed_at": "2026-09-23T16:00:00Z",
-          "capacity_percent": 24.09,
-          "volume_ml": 21336.985,
-          "storage_level_m": 317.419
-        },
-        {
-          "observed_at": "2026-09-23T17:00:00Z",
-          "capacity_percent": 24.08,
-          "volume_ml": 21334.184,
-          "storage_level_m": 317.418
-        },
-        {
-          "observed_at": "2026-09-23T18:00:00Z",
-          "capacity_percent": 24.08,
-          "volume_ml": 21331.383,
-          "storage_level_m": 317.417
-        },
-        {
-          "observed_at": "2026-09-23T19:00:00Z",
-          "capacity_percent": 24.08,
-          "volume_ml": 21325.781,
-          "storage_level_m": 317.415
-        },
-        {
-          "observed_at": "2026-09-23T20:00:00Z",
-          "capacity_percent": 24.06,
-          "volume_ml": 21314.58,
-          "storage_level_m": 317.411
-        },
         {
           "observed_at": "2026-09-23T21:00:00Z",
           "capacity_percent": 24.06,
@@ -25582,6 +25563,42 @@
           "capacity_percent": 23.48,
           "volume_ml": 20801.844,
           "storage_level_m": 317.226
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 23.48,
+          "volume_ml": 20799.096,
+          "storage_level_m": 317.225
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 23.48,
+          "volume_ml": 20796.349,
+          "storage_level_m": 317.224
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 23.47,
+          "volume_ml": 20793.603,
+          "storage_level_m": 317.223
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 23.47,
+          "volume_ml": 20788.11,
+          "storage_level_m": 317.221
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 23.46,
+          "volume_ml": 20777.128,
+          "storage_level_m": 317.217
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 23.45,
+          "volume_ml": 20768.894,
+          "storage_level_m": 317.214
         }
       ]
     },
@@ -25591,8 +25608,8 @@
       "operator": "Sunwater",
       "station_code": "416409A",
       "site_id": 2624,
-      "observed_at": "2026-09-27T07:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:00:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "datetime",
       "capacity_percent": 50.45,
       "volume_ml": 34378.46,
@@ -25619,65 +25636,17 @@
         "Coolmunda Dam",
         "Coolmunda"
       ],
-      "change_24h_percentage_points": -0.2,
-      "comparison_24h_at": "2026-09-26T07:00:00Z",
-      "change_7d_percentage_points": -1.05,
-      "comparison_7d_at": "2026-09-20T07:00:00Z",
-      "change_30d_percentage_points": -4.06,
-      "comparison_30d_at": "2026-08-28T07:00:00Z",
+      "change_24h_percentage_points": -0.15,
+      "comparison_24h_at": "2026-09-26T14:00:00Z",
+      "change_7d_percentage_points": -1.04,
+      "comparison_7d_at": "2026-09-20T14:00:00Z",
+      "change_30d_percentage_points": -4.01,
+      "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 78.4,
+      "data_age_minutes": 44.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-23T16:00:00Z",
-          "capacity_percent": 51.0,
-          "volume_ml": 34752.623,
-          "storage_level_m": 311.754
-        },
-        {
-          "observed_at": "2026-09-23T17:00:00Z",
-          "capacity_percent": 51.0,
-          "volume_ml": 34752.623,
-          "storage_level_m": 311.754
-        },
-        {
-          "observed_at": "2026-09-23T18:00:00Z",
-          "capacity_percent": 51.0,
-          "volume_ml": 34752.623,
-          "storage_level_m": 311.754
-        },
-        {
-          "observed_at": "2026-09-23T19:00:00Z",
-          "capacity_percent": 51.0,
-          "volume_ml": 34752.623,
-          "storage_level_m": 311.754
-        },
-        {
-          "observed_at": "2026-09-23T20:00:00Z",
-          "capacity_percent": 50.98,
-          "volume_ml": 34741.242,
-          "storage_level_m": 311.753
-        },
-        {
-          "observed_at": "2026-09-23T21:00:00Z",
-          "capacity_percent": 50.98,
-          "volume_ml": 34741.242,
-          "storage_level_m": 311.753
-        },
-        {
-          "observed_at": "2026-09-23T22:00:00Z",
-          "capacity_percent": 50.98,
-          "volume_ml": 34741.242,
-          "storage_level_m": 311.753
-        },
-        {
-          "observed_at": "2026-09-23T23:00:00Z",
-          "capacity_percent": 50.97,
-          "volume_ml": 34729.864,
-          "storage_level_m": 311.752
-        },
         {
           "observed_at": "2026-09-24T00:00:00Z",
           "capacity_percent": 50.98,
@@ -26169,6 +26138,54 @@
           "capacity_percent": 50.45,
           "volume_ml": 34378.46,
           "storage_level_m": 311.721
+        },
+        {
+          "observed_at": "2026-09-27T08:00:00Z",
+          "capacity_percent": 50.52,
+          "volume_ml": 34423.66,
+          "storage_level_m": 311.725
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 50.4,
+          "volume_ml": 34344.588,
+          "storage_level_m": 311.718
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 50.34,
+          "volume_ml": 34299.462,
+          "storage_level_m": 311.714
+        },
+        {
+          "observed_at": "2026-09-27T10:23:10Z",
+          "capacity_percent": 50.53,
+          "volume_ml": 34434.966,
+          "storage_level_m": 311.726
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 50.55,
+          "volume_ml": 34446.275,
+          "storage_level_m": 311.727
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 50.53,
+          "volume_ml": 34434.966,
+          "storage_level_m": 311.726
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 50.45,
+          "volume_ml": 34378.46,
+          "storage_level_m": 311.721
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 50.45,
+          "volume_ml": 34378.46,
+          "storage_level_m": 311.721
         }
       ]
     },
@@ -26178,12 +26195,12 @@
       "operator": "Sunwater",
       "station_code": "422212B",
       "site_id": 2644,
-      "observed_at": "2026-09-27T07:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:00:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "datetime",
-      "capacity_percent": 56.27,
-      "volume_ml": 45972.169,
-      "storage_level_m": 205.367,
+      "capacity_percent": 56.04,
+      "volume_ml": 45784.999,
+      "storage_level_m": 205.354,
       "rainfall_mm": 0.0,
       "flow_cms": 0.0,
       "total_flow_ml": 0.0,
@@ -26191,7 +26208,7 @@
       "source": "sunwater_api",
       "source_url": "https://data.sunwater.com.au/api/Sites/422212B/data",
       "information": null,
-      "full_supply_volume_ml": 81699.252,
+      "full_supply_volume_ml": 81700.569,
       "full_supply_volume_basis": "derived_from_current_volume_and_percentage",
       "latitude": -27.8590234,
       "longitude": 148.6340694,
@@ -26208,59 +26225,17 @@
         "EJ Beardmore",
         "Beardmore"
       ],
-      "change_24h_percentage_points": -0.69,
-      "comparison_24h_at": "2026-09-26T07:00:00Z",
-      "change_7d_percentage_points": -4.37,
-      "comparison_7d_at": "2026-09-20T07:00:00Z",
-      "change_30d_percentage_points": -11.95,
-      "comparison_30d_at": "2026-08-28T07:00:00Z",
+      "change_24h_percentage_points": -0.76,
+      "comparison_24h_at": "2026-09-26T14:00:00Z",
+      "change_7d_percentage_points": -4.5,
+      "comparison_7d_at": "2026-09-20T14:00:00Z",
+      "change_30d_percentage_points": -12.16,
+      "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 78.4,
+      "data_age_minutes": 44.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-23T20:00:00Z",
-          "capacity_percent": 58.82,
-          "volume_ml": 48058.757,
-          "storage_level_m": 205.509
-        },
-        {
-          "observed_at": "2026-09-23T21:00:00Z",
-          "capacity_percent": 58.73,
-          "volume_ml": 47981.799,
-          "storage_level_m": 205.504
-        },
-        {
-          "observed_at": "2026-09-23T22:00:00Z",
-          "capacity_percent": 58.69,
-          "volume_ml": 47951.042,
-          "storage_level_m": 205.502
-        },
-        {
-          "observed_at": "2026-09-23T23:00:00Z",
-          "capacity_percent": 58.77,
-          "volume_ml": 48012.571,
-          "storage_level_m": 205.506
-        },
-        {
-          "observed_at": "2026-09-24T00:00:00Z",
-          "capacity_percent": 58.71,
-          "volume_ml": 47966.419,
-          "storage_level_m": 205.503
-        },
-        {
-          "observed_at": "2026-09-24T01:00:00Z",
-          "capacity_percent": 58.56,
-          "volume_ml": 47845.958,
-          "storage_level_m": 205.495
-        },
-        {
-          "observed_at": "2026-09-24T02:00:00Z",
-          "capacity_percent": 58.64,
-          "volume_ml": 47905.425,
-          "storage_level_m": 205.499
-        },
         {
           "observed_at": "2026-09-24T03:00:00Z",
           "capacity_percent": 58.51,
@@ -26758,6 +26733,48 @@
           "capacity_percent": 56.27,
           "volume_ml": 45972.169,
           "storage_level_m": 205.367
+        },
+        {
+          "observed_at": "2026-09-27T08:00:00Z",
+          "capacity_percent": 56.18,
+          "volume_ml": 45900.112,
+          "storage_level_m": 205.362
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 56.18,
+          "volume_ml": 45900.112,
+          "storage_level_m": 205.362
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 56.18,
+          "volume_ml": 45900.112,
+          "storage_level_m": 205.362
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 56.13,
+          "volume_ml": 45856.919,
+          "storage_level_m": 205.359
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 56.06,
+          "volume_ml": 45799.376,
+          "storage_level_m": 205.355
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 56.08,
+          "volume_ml": 45813.757,
+          "storage_level_m": 205.356
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 56.04,
+          "volume_ml": 45784.999,
+          "storage_level_m": 205.354
         }
       ]
     },
@@ -26767,12 +26784,12 @@
       "operator": "Sunwater",
       "station_code": "120211A",
       "site_id": 2056,
-      "observed_at": "2026-09-27T07:50:00Z",
+      "observed_at": "2026-09-27T13:50:00Z",
       "observation_date": "2026-09-27",
       "observation_precision": "datetime",
-      "capacity_percent": 97.14,
-      "volume_ml": 109260.677,
-      "storage_level_m": 562.328,
+      "capacity_percent": 97.1,
+      "volume_ml": 109210.665,
+      "storage_level_m": 562.322,
       "rainfall_mm": 0.0,
       "flow_cms": 0.0,
       "total_flow_ml": 0.0,
@@ -26780,7 +26797,7 @@
       "source": "sunwater_api",
       "source_url": "https://data.sunwater.com.au/api/Sites/120211A/data",
       "information": null,
-      "full_supply_volume_ml": 112477.534,
+      "full_supply_volume_ml": 112472.364,
       "full_supply_volume_basis": "derived_from_current_volume_and_percentage",
       "latitude": -21.1630856,
       "longitude": 148.4026428,
@@ -26795,233 +26812,17 @@
         "Eungella Dam",
         "Eungella"
       ],
-      "change_24h_percentage_points": -0.1,
-      "comparison_24h_at": "2026-09-26T07:50:00Z",
-      "change_7d_percentage_points": -0.43,
-      "comparison_7d_at": "2026-09-20T07:50:00Z",
-      "change_30d_percentage_points": -1.72,
-      "comparison_30d_at": "2026-08-28T07:50:00Z",
+      "change_24h_percentage_points": -0.04,
+      "comparison_24h_at": "2026-09-26T13:50:00Z",
+      "change_7d_percentage_points": -0.44,
+      "comparison_7d_at": "2026-09-20T13:50:00Z",
+      "change_30d_percentage_points": -1.76,
+      "comparison_30d_at": "2026-08-28T13:50:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 28.4,
+      "data_age_minutes": 54.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-26T17:00:00Z",
-          "capacity_percent": 97.18,
-          "volume_ml": 109302.366,
-          "storage_level_m": 562.333
-        },
-        {
-          "observed_at": "2026-09-26T17:10:00Z",
-          "capacity_percent": 97.16,
-          "volume_ml": 109277.351,
-          "storage_level_m": 562.33
-        },
-        {
-          "observed_at": "2026-09-26T17:20:00Z",
-          "capacity_percent": 97.19,
-          "volume_ml": 109310.705,
-          "storage_level_m": 562.334
-        },
-        {
-          "observed_at": "2026-09-26T17:30:00Z",
-          "capacity_percent": 97.15,
-          "volume_ml": 109269.014,
-          "storage_level_m": 562.329
-        },
-        {
-          "observed_at": "2026-09-26T17:40:00Z",
-          "capacity_percent": 97.17,
-          "volume_ml": 109294.027,
-          "storage_level_m": 562.332
-        },
-        {
-          "observed_at": "2026-09-26T17:50:00Z",
-          "capacity_percent": 97.19,
-          "volume_ml": 109310.705,
-          "storage_level_m": 562.334
-        },
-        {
-          "observed_at": "2026-09-26T18:00:00Z",
-          "capacity_percent": 97.17,
-          "volume_ml": 109294.027,
-          "storage_level_m": 562.332
-        },
-        {
-          "observed_at": "2026-09-26T18:10:00Z",
-          "capacity_percent": 97.17,
-          "volume_ml": 109294.027,
-          "storage_level_m": 562.332
-        },
-        {
-          "observed_at": "2026-09-26T18:20:00Z",
-          "capacity_percent": 97.19,
-          "volume_ml": 109310.705,
-          "storage_level_m": 562.334
-        },
-        {
-          "observed_at": "2026-09-26T18:30:00Z",
-          "capacity_percent": 97.21,
-          "volume_ml": 109335.724,
-          "storage_level_m": 562.337
-        },
-        {
-          "observed_at": "2026-09-26T18:40:00Z",
-          "capacity_percent": 97.18,
-          "volume_ml": 109302.366,
-          "storage_level_m": 562.333
-        },
-        {
-          "observed_at": "2026-09-26T18:50:00Z",
-          "capacity_percent": 97.16,
-          "volume_ml": 109285.689,
-          "storage_level_m": 562.331
-        },
-        {
-          "observed_at": "2026-09-26T19:00:00Z",
-          "capacity_percent": 97.19,
-          "volume_ml": 109310.705,
-          "storage_level_m": 562.334
-        },
-        {
-          "observed_at": "2026-09-26T19:10:00Z",
-          "capacity_percent": 97.16,
-          "volume_ml": 109285.689,
-          "storage_level_m": 562.331
-        },
-        {
-          "observed_at": "2026-09-26T19:20:00Z",
-          "capacity_percent": 97.18,
-          "volume_ml": 109302.366,
-          "storage_level_m": 562.333
-        },
-        {
-          "observed_at": "2026-09-26T19:30:00Z",
-          "capacity_percent": 97.16,
-          "volume_ml": 109285.689,
-          "storage_level_m": 562.331
-        },
-        {
-          "observed_at": "2026-09-26T19:40:00Z",
-          "capacity_percent": 97.19,
-          "volume_ml": 109310.705,
-          "storage_level_m": 562.334
-        },
-        {
-          "observed_at": "2026-09-26T19:50:00Z",
-          "capacity_percent": 97.13,
-          "volume_ml": 109252.341,
-          "storage_level_m": 562.327
-        },
-        {
-          "observed_at": "2026-09-26T20:00:00Z",
-          "capacity_percent": 97.19,
-          "volume_ml": 109310.705,
-          "storage_level_m": 562.334
-        },
-        {
-          "observed_at": "2026-09-26T20:10:00Z",
-          "capacity_percent": 97.18,
-          "volume_ml": 109302.366,
-          "storage_level_m": 562.333
-        },
-        {
-          "observed_at": "2026-09-26T20:20:00Z",
-          "capacity_percent": 97.16,
-          "volume_ml": 109285.689,
-          "storage_level_m": 562.331
-        },
-        {
-          "observed_at": "2026-09-26T20:30:00Z",
-          "capacity_percent": 97.18,
-          "volume_ml": 109302.366,
-          "storage_level_m": 562.333
-        },
-        {
-          "observed_at": "2026-09-26T20:40:00Z",
-          "capacity_percent": 97.16,
-          "volume_ml": 109277.351,
-          "storage_level_m": 562.33
-        },
-        {
-          "observed_at": "2026-09-26T20:50:00Z",
-          "capacity_percent": 97.16,
-          "volume_ml": 109277.351,
-          "storage_level_m": 562.33
-        },
-        {
-          "observed_at": "2026-09-26T21:00:00Z",
-          "capacity_percent": 97.15,
-          "volume_ml": 109269.014,
-          "storage_level_m": 562.329
-        },
-        {
-          "observed_at": "2026-09-26T21:10:00Z",
-          "capacity_percent": 97.14,
-          "volume_ml": 109260.677,
-          "storage_level_m": 562.328
-        },
-        {
-          "observed_at": "2026-09-26T21:20:00Z",
-          "capacity_percent": 97.15,
-          "volume_ml": 109269.014,
-          "storage_level_m": 562.329
-        },
-        {
-          "observed_at": "2026-09-26T21:30:00Z",
-          "capacity_percent": 97.15,
-          "volume_ml": 109269.014,
-          "storage_level_m": 562.329
-        },
-        {
-          "observed_at": "2026-09-26T21:40:00Z",
-          "capacity_percent": 97.17,
-          "volume_ml": 109294.027,
-          "storage_level_m": 562.332
-        },
-        {
-          "observed_at": "2026-09-26T21:50:00Z",
-          "capacity_percent": 97.17,
-          "volume_ml": 109294.027,
-          "storage_level_m": 562.332
-        },
-        {
-          "observed_at": "2026-09-26T22:00:00Z",
-          "capacity_percent": 97.16,
-          "volume_ml": 109277.351,
-          "storage_level_m": 562.33
-        },
-        {
-          "observed_at": "2026-09-26T22:10:00Z",
-          "capacity_percent": 97.16,
-          "volume_ml": 109285.689,
-          "storage_level_m": 562.331
-        },
-        {
-          "observed_at": "2026-09-26T22:20:00Z",
-          "capacity_percent": 97.17,
-          "volume_ml": 109294.027,
-          "storage_level_m": 562.332
-        },
-        {
-          "observed_at": "2026-09-26T22:30:00Z",
-          "capacity_percent": 97.16,
-          "volume_ml": 109285.689,
-          "storage_level_m": 562.331
-        },
-        {
-          "observed_at": "2026-09-26T22:40:00Z",
-          "capacity_percent": 97.16,
-          "volume_ml": 109285.689,
-          "storage_level_m": 562.331
-        },
-        {
-          "observed_at": "2026-09-26T22:50:00Z",
-          "capacity_percent": 97.17,
-          "volume_ml": 109294.027,
-          "storage_level_m": 562.332
-        },
         {
           "observed_at": "2026-09-26T23:00:00Z",
           "capacity_percent": 97.16,
@@ -27345,6 +27146,222 @@
           "capacity_percent": 97.14,
           "volume_ml": 109260.677,
           "storage_level_m": 562.328
+        },
+        {
+          "observed_at": "2026-09-27T08:00:00Z",
+          "capacity_percent": 97.15,
+          "volume_ml": 109269.014,
+          "storage_level_m": 562.329
+        },
+        {
+          "observed_at": "2026-09-27T08:10:00Z",
+          "capacity_percent": 97.12,
+          "volume_ml": 109235.669,
+          "storage_level_m": 562.325
+        },
+        {
+          "observed_at": "2026-09-27T08:20:00Z",
+          "capacity_percent": 97.16,
+          "volume_ml": 109277.351,
+          "storage_level_m": 562.33
+        },
+        {
+          "observed_at": "2026-09-27T08:30:00Z",
+          "capacity_percent": 97.13,
+          "volume_ml": 109244.005,
+          "storage_level_m": 562.326
+        },
+        {
+          "observed_at": "2026-09-27T08:40:00Z",
+          "capacity_percent": 97.16,
+          "volume_ml": 109285.689,
+          "storage_level_m": 562.331
+        },
+        {
+          "observed_at": "2026-09-27T08:50:00Z",
+          "capacity_percent": 97.16,
+          "volume_ml": 109285.689,
+          "storage_level_m": 562.331
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 7.07,
+          "volume_ml": 7948.51,
+          "storage_level_m": 540.0
+        },
+        {
+          "observed_at": "2026-09-27T09:10:00Z",
+          "capacity_percent": 97.1,
+          "volume_ml": 109218.999,
+          "storage_level_m": 562.323
+        },
+        {
+          "observed_at": "2026-09-27T09:20:00Z",
+          "capacity_percent": 97.16,
+          "volume_ml": 109285.689,
+          "storage_level_m": 562.331
+        },
+        {
+          "observed_at": "2026-09-27T09:30:00Z",
+          "capacity_percent": 97.16,
+          "volume_ml": 109277.351,
+          "storage_level_m": 562.33
+        },
+        {
+          "observed_at": "2026-09-27T09:40:00Z",
+          "capacity_percent": 97.14,
+          "volume_ml": 109260.677,
+          "storage_level_m": 562.328
+        },
+        {
+          "observed_at": "2026-09-27T09:50:00Z",
+          "capacity_percent": 97.16,
+          "volume_ml": 109285.689,
+          "storage_level_m": 562.331
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 97.13,
+          "volume_ml": 109252.341,
+          "storage_level_m": 562.327
+        },
+        {
+          "observed_at": "2026-09-27T10:10:00Z",
+          "capacity_percent": 97.13,
+          "volume_ml": 109252.341,
+          "storage_level_m": 562.327
+        },
+        {
+          "observed_at": "2026-09-27T10:20:00Z",
+          "capacity_percent": 97.13,
+          "volume_ml": 109244.005,
+          "storage_level_m": 562.326
+        },
+        {
+          "observed_at": "2026-09-27T10:30:00Z",
+          "capacity_percent": 97.1,
+          "volume_ml": 109210.665,
+          "storage_level_m": 562.322
+        },
+        {
+          "observed_at": "2026-09-27T10:40:00Z",
+          "capacity_percent": 97.19,
+          "volume_ml": 109310.705,
+          "storage_level_m": 562.334
+        },
+        {
+          "observed_at": "2026-09-27T10:50:00Z",
+          "capacity_percent": 97.17,
+          "volume_ml": 109294.027,
+          "storage_level_m": 562.332
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 97.15,
+          "volume_ml": 109269.014,
+          "storage_level_m": 562.329
+        },
+        {
+          "observed_at": "2026-09-27T11:10:00Z",
+          "capacity_percent": 97.21,
+          "volume_ml": 109335.724,
+          "storage_level_m": 562.337
+        },
+        {
+          "observed_at": "2026-09-27T11:20:00Z",
+          "capacity_percent": 97.16,
+          "volume_ml": 109285.689,
+          "storage_level_m": 562.331
+        },
+        {
+          "observed_at": "2026-09-27T11:30:00Z",
+          "capacity_percent": 97.14,
+          "volume_ml": 109260.677,
+          "storage_level_m": 562.328
+        },
+        {
+          "observed_at": "2026-09-27T11:40:00Z",
+          "capacity_percent": 97.16,
+          "volume_ml": 109277.351,
+          "storage_level_m": 562.33
+        },
+        {
+          "observed_at": "2026-09-27T11:50:00Z",
+          "capacity_percent": 97.16,
+          "volume_ml": 109285.689,
+          "storage_level_m": 562.331
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 97.13,
+          "volume_ml": 109244.005,
+          "storage_level_m": 562.326
+        },
+        {
+          "observed_at": "2026-09-27T12:10:00Z",
+          "capacity_percent": 97.11,
+          "volume_ml": 109227.334,
+          "storage_level_m": 562.324
+        },
+        {
+          "observed_at": "2026-09-27T12:20:00Z",
+          "capacity_percent": 97.14,
+          "volume_ml": 109260.677,
+          "storage_level_m": 562.328
+        },
+        {
+          "observed_at": "2026-09-27T12:30:00Z",
+          "capacity_percent": 97.11,
+          "volume_ml": 109227.334,
+          "storage_level_m": 562.324
+        },
+        {
+          "observed_at": "2026-09-27T12:40:00Z",
+          "capacity_percent": 97.1,
+          "volume_ml": 109218.999,
+          "storage_level_m": 562.323
+        },
+        {
+          "observed_at": "2026-09-27T12:50:00Z",
+          "capacity_percent": 97.13,
+          "volume_ml": 109252.341,
+          "storage_level_m": 562.327
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 97.09,
+          "volume_ml": 109202.331,
+          "storage_level_m": 562.321
+        },
+        {
+          "observed_at": "2026-09-27T13:10:00Z",
+          "capacity_percent": 97.13,
+          "volume_ml": 109244.005,
+          "storage_level_m": 562.326
+        },
+        {
+          "observed_at": "2026-09-27T13:20:00Z",
+          "capacity_percent": 97.12,
+          "volume_ml": 109235.669,
+          "storage_level_m": 562.325
+        },
+        {
+          "observed_at": "2026-09-27T13:30:00Z",
+          "capacity_percent": 97.07,
+          "volume_ml": 109185.664,
+          "storage_level_m": 562.319
+        },
+        {
+          "observed_at": "2026-09-27T13:40:00Z",
+          "capacity_percent": 97.03,
+          "volume_ml": 109135.674,
+          "storage_level_m": 562.313
+        },
+        {
+          "observed_at": "2026-09-27T13:50:00Z",
+          "capacity_percent": 97.1,
+          "volume_ml": 109210.665,
+          "storage_level_m": 562.322
         }
       ]
     },
@@ -27354,12 +27371,12 @@
       "operator": "Sunwater",
       "station_code": "130216A",
       "site_id": 2145,
-      "observed_at": "2026-09-27T08:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:00:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "datetime",
-      "capacity_percent": 27.28,
-      "volume_ml": 354986.845,
-      "storage_level_m": 195.683,
+      "capacity_percent": 27.29,
+      "volume_ml": 355138.009,
+      "storage_level_m": 195.685,
       "rainfall_mm": 0.0,
       "flow_cms": 0.0,
       "total_flow_ml": 0.0,
@@ -27367,7 +27384,7 @@
       "source": "sunwater_api",
       "source_url": "https://data.sunwater.com.au/api/Sites/130216A/data",
       "information": null,
-      "full_supply_volume_ml": 1301271.426,
+      "full_supply_volume_ml": 1301348.512,
       "full_supply_volume_basis": "derived_from_current_volume_and_percentage",
       "latitude": -23.705916,
       "longitude": 148.0561083,
@@ -27382,59 +27399,17 @@
         "Fairbairn Dam",
         "Fairbairn"
       ],
-      "change_24h_percentage_points": -0.1,
-      "comparison_24h_at": "2026-09-26T08:00:00Z",
-      "change_7d_percentage_points": -0.59,
-      "comparison_7d_at": "2026-09-20T08:00:00Z",
-      "change_30d_percentage_points": -2.7,
-      "comparison_30d_at": "2026-08-28T08:00:00Z",
+      "change_24h_percentage_points": -0.07,
+      "comparison_24h_at": "2026-09-26T14:00:00Z",
+      "change_7d_percentage_points": -0.55,
+      "comparison_7d_at": "2026-09-20T14:00:00Z",
+      "change_30d_percentage_points": -2.66,
+      "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 18.4,
+      "data_age_minutes": 44.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-25T01:00:00Z",
-          "capacity_percent": 27.48,
-          "volume_ml": 357487.188,
-          "storage_level_m": 195.716
-        },
-        {
-          "observed_at": "2026-09-25T02:00:00Z",
-          "capacity_percent": 27.46,
-          "volume_ml": 357259.343,
-          "storage_level_m": 195.713
-        },
-        {
-          "observed_at": "2026-09-25T03:00:00Z",
-          "capacity_percent": 27.44,
-          "volume_ml": 357031.607,
-          "storage_level_m": 195.71
-        },
-        {
-          "observed_at": "2026-09-25T04:00:00Z",
-          "capacity_percent": 27.42,
-          "volume_ml": 356803.979,
-          "storage_level_m": 195.707
-        },
-        {
-          "observed_at": "2026-09-25T05:00:00Z",
-          "capacity_percent": 27.44,
-          "volume_ml": 357031.607,
-          "storage_level_m": 195.71
-        },
-        {
-          "observed_at": "2026-09-25T05:23:10Z",
-          "capacity_percent": 27.36,
-          "volume_ml": 356046.0,
-          "storage_level_m": 195.697
-        },
-        {
-          "observed_at": "2026-09-25T05:38:10Z",
-          "capacity_percent": 27.26,
-          "volume_ml": 354684.661,
-          "storage_level_m": 195.679
-        },
         {
           "observed_at": "2026-09-25T05:43:10Z",
           "capacity_percent": 27.33,
@@ -27932,6 +27907,48 @@
           "capacity_percent": 27.28,
           "volume_ml": 354986.845,
           "storage_level_m": 195.683
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 27.33,
+          "volume_ml": 355591.788,
+          "storage_level_m": 195.691
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 27.33,
+          "volume_ml": 355591.788,
+          "storage_level_m": 195.691
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 27.32,
+          "volume_ml": 355440.481,
+          "storage_level_m": 195.689
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 27.33,
+          "volume_ml": 355591.788,
+          "storage_level_m": 195.691
+        },
+        {
+          "observed_at": "2026-09-27T12:38:10Z",
+          "capacity_percent": 27.27,
+          "volume_ml": 354760.189,
+          "storage_level_m": 195.68
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 27.29,
+          "volume_ml": 355062.421,
+          "storage_level_m": 195.684
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 27.29,
+          "volume_ml": 355138.009,
+          "storage_level_m": 195.685
         }
       ]
     },
@@ -27941,12 +27958,12 @@
       "operator": "Sunwater",
       "station_code": "135009A",
       "site_id": 2219,
-      "observed_at": "2026-09-27T07:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:00:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "datetime",
-      "capacity_percent": 92.33,
-      "volume_ml": 518961.531,
-      "storage_level_m": 74.732,
+      "capacity_percent": 92.27,
+      "volume_ml": 518607.613,
+      "storage_level_m": 74.725,
       "rainfall_mm": 0.0,
       "flow_cms": 0.0,
       "total_flow_ml": 0.0,
@@ -27954,7 +27971,7 @@
       "source": "sunwater_api",
       "source_url": "https://data.sunwater.com.au/api/Sites/135009A/data",
       "information": null,
-      "full_supply_volume_ml": 562072.491,
+      "full_supply_volume_ml": 562054.42,
       "full_supply_volume_basis": "derived_from_current_volume_and_percentage",
       "latitude": -24.8707839,
       "longitude": 151.8495922,
@@ -27970,59 +27987,17 @@
         "Fred Haigh",
         "Monduran Dam"
       ],
-      "change_24h_percentage_points": -0.11,
-      "comparison_24h_at": "2026-09-26T07:00:00Z",
-      "change_7d_percentage_points": -0.51,
-      "comparison_7d_at": "2026-09-20T07:00:00Z",
+      "change_24h_percentage_points": -0.06,
+      "comparison_24h_at": "2026-09-26T14:00:00Z",
+      "change_7d_percentage_points": -0.53,
+      "comparison_7d_at": "2026-09-20T14:00:00Z",
       "change_30d_percentage_points": -2.15,
-      "comparison_30d_at": "2026-08-28T07:00:00Z",
+      "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 78.4,
+      "data_age_minutes": 44.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-23T16:00:00Z",
-          "capacity_percent": 92.49,
-          "volume_ml": 519821.798,
-          "storage_level_m": 74.749
-        },
-        {
-          "observed_at": "2026-09-23T17:00:00Z",
-          "capacity_percent": 92.49,
-          "volume_ml": 519821.798,
-          "storage_level_m": 74.749
-        },
-        {
-          "observed_at": "2026-09-23T18:00:00Z",
-          "capacity_percent": 92.47,
-          "volume_ml": 519720.535,
-          "storage_level_m": 74.747
-        },
-        {
-          "observed_at": "2026-09-23T19:00:00Z",
-          "capacity_percent": 92.49,
-          "volume_ml": 519821.798,
-          "storage_level_m": 74.749
-        },
-        {
-          "observed_at": "2026-09-23T20:00:00Z",
-          "capacity_percent": 92.47,
-          "volume_ml": 519720.535,
-          "storage_level_m": 74.747
-        },
-        {
-          "observed_at": "2026-09-23T21:00:00Z",
-          "capacity_percent": 92.47,
-          "volume_ml": 519720.535,
-          "storage_level_m": 74.747
-        },
-        {
-          "observed_at": "2026-09-23T22:00:00Z",
-          "capacity_percent": 92.47,
-          "volume_ml": 519720.535,
-          "storage_level_m": 74.747
-        },
         {
           "observed_at": "2026-09-23T23:00:00Z",
           "capacity_percent": 92.47,
@@ -28520,6 +28495,48 @@
           "capacity_percent": 92.33,
           "volume_ml": 518961.531,
           "storage_level_m": 74.732
+        },
+        {
+          "observed_at": "2026-09-27T08:00:00Z",
+          "capacity_percent": 92.32,
+          "volume_ml": 518860.393,
+          "storage_level_m": 74.73
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 92.31,
+          "volume_ml": 518809.83,
+          "storage_level_m": 74.729
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 92.3,
+          "volume_ml": 518759.27,
+          "storage_level_m": 74.728
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 92.29,
+          "volume_ml": 518708.714,
+          "storage_level_m": 74.727
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 92.28,
+          "volume_ml": 518658.162,
+          "storage_level_m": 74.726
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 92.26,
+          "volume_ml": 518557.068,
+          "storage_level_m": 74.724
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 92.27,
+          "volume_ml": 518607.613,
+          "storage_level_m": 74.725
         }
       ]
     },
@@ -28529,12 +28546,12 @@
       "operator": "Sunwater",
       "station_code": "416303A",
       "site_id": 2616,
-      "observed_at": "2026-09-27T08:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:30:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "datetime",
-      "capacity_percent": 42.94,
-      "volume_ml": 109055.401,
-      "storage_level_m": 400.939,
+      "capacity_percent": 42.99,
+      "volume_ml": 109189.792,
+      "storage_level_m": 400.953,
       "rainfall_mm": 0.0,
       "flow_cms": 0.0,
       "total_flow_ml": 0.0,
@@ -28542,7 +28559,7 @@
       "source": "sunwater_api",
       "source_url": "https://data.sunwater.com.au/api/Sites/416315B/data",
       "information": null,
-      "full_supply_volume_ml": 253971.591,
+      "full_supply_volume_ml": 253988.816,
       "full_supply_volume_basis": "derived_from_current_volume_and_percentage",
       "latitude": -28.9764247,
       "longitude": 151.4649501,
@@ -28557,173 +28574,17 @@
         "Glenlyon Dam",
         "Glenlyon"
       ],
-      "change_24h_percentage_points": -0.31,
-      "comparison_24h_at": "2026-09-26T08:00:00Z",
-      "change_7d_percentage_points": -1.41,
-      "comparison_7d_at": "2026-09-20T08:00:00Z",
-      "change_30d_percentage_points": -2.94,
-      "comparison_30d_at": "2026-08-28T08:00:00Z",
+      "change_24h_percentage_points": -0.1,
+      "comparison_24h_at": "2026-09-26T14:30:00Z",
+      "change_7d_percentage_points": -1.35,
+      "comparison_7d_at": "2026-09-20T14:30:00Z",
+      "change_30d_percentage_points": -2.96,
+      "comparison_30d_at": "2026-08-28T14:30:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 18.4,
+      "data_age_minutes": 14.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-26T09:45:00Z",
-          "capacity_percent": 43.19,
-          "volume_ml": 109699.58,
-          "storage_level_m": 401.006
-        },
-        {
-          "observed_at": "2026-09-26T10:00:00Z",
-          "capacity_percent": 43.15,
-          "volume_ml": 109593.642,
-          "storage_level_m": 400.995
-        },
-        {
-          "observed_at": "2026-09-26T10:15:00Z",
-          "capacity_percent": 43.15,
-          "volume_ml": 109603.27,
-          "storage_level_m": 400.996
-        },
-        {
-          "observed_at": "2026-09-26T10:30:00Z",
-          "capacity_percent": 43.14,
-          "volume_ml": 109584.015,
-          "storage_level_m": 400.994
-        },
-        {
-          "observed_at": "2026-09-26T10:45:00Z",
-          "capacity_percent": 43.14,
-          "volume_ml": 109564.762,
-          "storage_level_m": 400.992
-        },
-        {
-          "observed_at": "2026-09-26T11:00:00Z",
-          "capacity_percent": 43.01,
-          "volume_ml": 109237.816,
-          "storage_level_m": 400.958
-        },
-        {
-          "observed_at": "2026-09-26T11:15:00Z",
-          "capacity_percent": 43.15,
-          "volume_ml": 109612.899,
-          "storage_level_m": 400.997
-        },
-        {
-          "observed_at": "2026-09-26T11:30:00Z",
-          "capacity_percent": 43.16,
-          "volume_ml": 109622.528,
-          "storage_level_m": 400.998
-        },
-        {
-          "observed_at": "2026-09-26T11:45:00Z",
-          "capacity_percent": 43.18,
-          "volume_ml": 109670.681,
-          "storage_level_m": 401.003
-        },
-        {
-          "observed_at": "2026-09-26T12:00:00Z",
-          "capacity_percent": 43.11,
-          "volume_ml": 109507.018,
-          "storage_level_m": 400.986
-        },
-        {
-          "observed_at": "2026-09-26T12:15:00Z",
-          "capacity_percent": 43.1,
-          "volume_ml": 109478.153,
-          "storage_level_m": 400.983
-        },
-        {
-          "observed_at": "2026-09-26T12:30:00Z",
-          "capacity_percent": 43.12,
-          "volume_ml": 109526.264,
-          "storage_level_m": 400.988
-        },
-        {
-          "observed_at": "2026-09-26T12:45:00Z",
-          "capacity_percent": 43.12,
-          "volume_ml": 109516.64,
-          "storage_level_m": 400.987
-        },
-        {
-          "observed_at": "2026-09-26T13:00:00Z",
-          "capacity_percent": 43.11,
-          "volume_ml": 109507.018,
-          "storage_level_m": 400.986
-        },
-        {
-          "observed_at": "2026-09-26T13:15:00Z",
-          "capacity_percent": 43.12,
-          "volume_ml": 109535.887,
-          "storage_level_m": 400.989
-        },
-        {
-          "observed_at": "2026-09-26T13:30:00Z",
-          "capacity_percent": 42.94,
-          "volume_ml": 109055.401,
-          "storage_level_m": 400.939
-        },
-        {
-          "observed_at": "2026-09-26T13:45:00Z",
-          "capacity_percent": 43.15,
-          "volume_ml": 109603.27,
-          "storage_level_m": 400.996
-        },
-        {
-          "observed_at": "2026-09-26T14:00:00Z",
-          "capacity_percent": 43.1,
-          "volume_ml": 109478.153,
-          "storage_level_m": 400.983
-        },
-        {
-          "observed_at": "2026-09-26T14:15:00Z",
-          "capacity_percent": 43.09,
-          "volume_ml": 109449.294,
-          "storage_level_m": 400.98
-        },
-        {
-          "observed_at": "2026-09-26T14:30:00Z",
-          "capacity_percent": 43.09,
-          "volume_ml": 109439.675,
-          "storage_level_m": 400.979
-        },
-        {
-          "observed_at": "2026-09-26T14:45:00Z",
-          "capacity_percent": 43.1,
-          "volume_ml": 109478.153,
-          "storage_level_m": 400.983
-        },
-        {
-          "observed_at": "2026-09-26T15:00:00Z",
-          "capacity_percent": 43.09,
-          "volume_ml": 109449.294,
-          "storage_level_m": 400.98
-        },
-        {
-          "observed_at": "2026-09-26T15:15:00Z",
-          "capacity_percent": 43.09,
-          "volume_ml": 109458.913,
-          "storage_level_m": 400.981
-        },
-        {
-          "observed_at": "2026-09-26T15:30:00Z",
-          "capacity_percent": 43.08,
-          "volume_ml": 109420.439,
-          "storage_level_m": 400.977
-        },
-        {
-          "observed_at": "2026-09-26T15:45:00Z",
-          "capacity_percent": 43.08,
-          "volume_ml": 109430.057,
-          "storage_level_m": 400.978
-        },
-        {
-          "observed_at": "2026-09-26T16:00:00Z",
-          "capacity_percent": 43.1,
-          "volume_ml": 109478.153,
-          "storage_level_m": 400.983
-        },
         {
           "observed_at": "2026-09-26T16:15:00Z",
           "capacity_percent": 43.13,
@@ -29107,6 +28968,162 @@
           "capacity_percent": 42.94,
           "volume_ml": 109055.401,
           "storage_level_m": 400.939
+        },
+        {
+          "observed_at": "2026-09-27T08:15:00Z",
+          "capacity_percent": 42.95,
+          "volume_ml": 109093.787,
+          "storage_level_m": 400.943
+        },
+        {
+          "observed_at": "2026-09-27T08:30:00Z",
+          "capacity_percent": 42.95,
+          "volume_ml": 109093.787,
+          "storage_level_m": 400.943
+        },
+        {
+          "observed_at": "2026-09-27T08:45:00Z",
+          "capacity_percent": 43.01,
+          "volume_ml": 109247.423,
+          "storage_level_m": 400.959
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 43.0,
+          "volume_ml": 109228.21,
+          "storage_level_m": 400.957
+        },
+        {
+          "observed_at": "2026-09-27T09:15:00Z",
+          "capacity_percent": 43.01,
+          "volume_ml": 109237.816,
+          "storage_level_m": 400.958
+        },
+        {
+          "observed_at": "2026-09-27T09:30:00Z",
+          "capacity_percent": 43.01,
+          "volume_ml": 109237.816,
+          "storage_level_m": 400.958
+        },
+        {
+          "observed_at": "2026-09-27T09:45:00Z",
+          "capacity_percent": 43.0,
+          "volume_ml": 109228.21,
+          "storage_level_m": 400.957
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 43.0,
+          "volume_ml": 109209.0,
+          "storage_level_m": 400.955
+        },
+        {
+          "observed_at": "2026-09-27T10:15:00Z",
+          "capacity_percent": 42.98,
+          "volume_ml": 109180.189,
+          "storage_level_m": 400.952
+        },
+        {
+          "observed_at": "2026-09-27T10:30:00Z",
+          "capacity_percent": 43.0,
+          "volume_ml": 109228.21,
+          "storage_level_m": 400.957
+        },
+        {
+          "observed_at": "2026-09-27T10:45:00Z",
+          "capacity_percent": 43.0,
+          "volume_ml": 109209.0,
+          "storage_level_m": 400.955
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 43.0,
+          "volume_ml": 109218.605,
+          "storage_level_m": 400.956
+        },
+        {
+          "observed_at": "2026-09-27T11:15:00Z",
+          "capacity_percent": 42.96,
+          "volume_ml": 109112.984,
+          "storage_level_m": 400.945
+        },
+        {
+          "observed_at": "2026-09-27T11:30:00Z",
+          "capacity_percent": 42.98,
+          "volume_ml": 109180.189,
+          "storage_level_m": 400.952
+        },
+        {
+          "observed_at": "2026-09-27T11:45:00Z",
+          "capacity_percent": 42.97,
+          "volume_ml": 109151.383,
+          "storage_level_m": 400.949
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 43.0,
+          "volume_ml": 109209.0,
+          "storage_level_m": 400.955
+        },
+        {
+          "observed_at": "2026-09-27T12:15:00Z",
+          "capacity_percent": 42.97,
+          "volume_ml": 109132.182,
+          "storage_level_m": 400.947
+        },
+        {
+          "observed_at": "2026-09-27T12:30:00Z",
+          "capacity_percent": 42.95,
+          "volume_ml": 109103.385,
+          "storage_level_m": 400.944
+        },
+        {
+          "observed_at": "2026-09-27T12:45:00Z",
+          "capacity_percent": 42.96,
+          "volume_ml": 109112.984,
+          "storage_level_m": 400.945
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 42.97,
+          "volume_ml": 109141.782,
+          "storage_level_m": 400.948
+        },
+        {
+          "observed_at": "2026-09-27T13:15:00Z",
+          "capacity_percent": 42.98,
+          "volume_ml": 109160.985,
+          "storage_level_m": 400.95
+        },
+        {
+          "observed_at": "2026-09-27T13:30:00Z",
+          "capacity_percent": 42.72,
+          "volume_ml": 108499.837,
+          "storage_level_m": 400.881
+        },
+        {
+          "observed_at": "2026-09-27T13:45:00Z",
+          "capacity_percent": 42.98,
+          "volume_ml": 109180.189,
+          "storage_level_m": 400.952
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 42.98,
+          "volume_ml": 109180.189,
+          "storage_level_m": 400.952
+        },
+        {
+          "observed_at": "2026-09-27T14:15:00Z",
+          "capacity_percent": 42.98,
+          "volume_ml": 109160.985,
+          "storage_level_m": 400.95
+        },
+        {
+          "observed_at": "2026-09-27T14:30:00Z",
+          "capacity_percent": 42.99,
+          "volume_ml": 109189.792,
+          "storage_level_m": 400.953
         }
       ]
     },
@@ -29116,12 +29133,12 @@
       "operator": "Sunwater",
       "station_code": "913015A",
       "site_id": 3780,
-      "observed_at": "2026-09-27T08:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:30:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "datetime",
-      "capacity_percent": 89.22,
-      "volume_ml": 95912.101,
-      "storage_level_m": 222.573,
+      "capacity_percent": 89.2,
+      "volume_ml": 95889.179,
+      "storage_level_m": 222.571,
       "rainfall_mm": 0.0,
       "flow_cms": 0.0,
       "total_flow_ml": 0.0,
@@ -29129,7 +29146,7 @@
       "source": "sunwater_api",
       "source_url": "https://data.sunwater.com.au/api/Sites/913015B/data",
       "information": null,
-      "full_supply_volume_ml": 107500.674,
+      "full_supply_volume_ml": 107499.08,
       "full_supply_volume_basis": "derived_from_current_volume_and_percentage",
       "latitude": -20.2208871,
       "longitude": 139.7340472,
@@ -29144,173 +29161,17 @@
         "Julius Dam",
         "Julius"
       ],
-      "change_24h_percentage_points": -0.17,
-      "comparison_24h_at": "2026-09-26T08:00:00Z",
-      "change_7d_percentage_points": -0.99,
-      "comparison_7d_at": "2026-09-20T08:00:00Z",
-      "change_30d_percentage_points": -2.92,
-      "comparison_30d_at": "2026-08-28T08:00:00Z",
+      "change_24h_percentage_points": -0.15,
+      "comparison_24h_at": "2026-09-26T14:30:00Z",
+      "change_7d_percentage_points": -0.98,
+      "comparison_7d_at": "2026-09-20T14:30:00Z",
+      "change_30d_percentage_points": -2.91,
+      "comparison_30d_at": "2026-08-28T14:30:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 18.4,
+      "data_age_minutes": 14.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-26T09:45:00Z",
-          "capacity_percent": 89.37,
-          "volume_ml": 96072.653,
-          "storage_level_m": 222.587
-        },
-        {
-          "observed_at": "2026-09-26T10:00:00Z",
-          "capacity_percent": 89.37,
-          "volume_ml": 96072.653,
-          "storage_level_m": 222.587
-        },
-        {
-          "observed_at": "2026-09-26T10:15:00Z",
-          "capacity_percent": 89.37,
-          "volume_ml": 96072.653,
-          "storage_level_m": 222.587
-        },
-        {
-          "observed_at": "2026-09-26T10:30:00Z",
-          "capacity_percent": 89.37,
-          "volume_ml": 96072.653,
-          "storage_level_m": 222.587
-        },
-        {
-          "observed_at": "2026-09-26T10:45:00Z",
-          "capacity_percent": 89.37,
-          "volume_ml": 96072.653,
-          "storage_level_m": 222.587
-        },
-        {
-          "observed_at": "2026-09-26T11:00:00Z",
-          "capacity_percent": 89.36,
-          "volume_ml": 96061.179,
-          "storage_level_m": 222.586
-        },
-        {
-          "observed_at": "2026-09-26T11:15:00Z",
-          "capacity_percent": 89.36,
-          "volume_ml": 96061.179,
-          "storage_level_m": 222.586
-        },
-        {
-          "observed_at": "2026-09-26T11:30:00Z",
-          "capacity_percent": 89.36,
-          "volume_ml": 96061.179,
-          "storage_level_m": 222.586
-        },
-        {
-          "observed_at": "2026-09-26T11:45:00Z",
-          "capacity_percent": 89.36,
-          "volume_ml": 96061.179,
-          "storage_level_m": 222.586
-        },
-        {
-          "observed_at": "2026-09-26T12:00:00Z",
-          "capacity_percent": 89.35,
-          "volume_ml": 96049.706,
-          "storage_level_m": 222.585
-        },
-        {
-          "observed_at": "2026-09-26T12:15:00Z",
-          "capacity_percent": 89.35,
-          "volume_ml": 96049.706,
-          "storage_level_m": 222.585
-        },
-        {
-          "observed_at": "2026-09-26T12:30:00Z",
-          "capacity_percent": 89.35,
-          "volume_ml": 96049.706,
-          "storage_level_m": 222.585
-        },
-        {
-          "observed_at": "2026-09-26T12:45:00Z",
-          "capacity_percent": 89.35,
-          "volume_ml": 96049.706,
-          "storage_level_m": 222.585
-        },
-        {
-          "observed_at": "2026-09-26T13:00:00Z",
-          "capacity_percent": 89.34,
-          "volume_ml": 96038.234,
-          "storage_level_m": 222.584
-        },
-        {
-          "observed_at": "2026-09-26T13:15:00Z",
-          "capacity_percent": 89.34,
-          "volume_ml": 96038.234,
-          "storage_level_m": 222.584
-        },
-        {
-          "observed_at": "2026-09-26T13:30:00Z",
-          "capacity_percent": 89.34,
-          "volume_ml": 96038.234,
-          "storage_level_m": 222.584
-        },
-        {
-          "observed_at": "2026-09-26T13:45:00Z",
-          "capacity_percent": 89.34,
-          "volume_ml": 96038.234,
-          "storage_level_m": 222.584
-        },
-        {
-          "observed_at": "2026-09-26T14:00:00Z",
-          "capacity_percent": 89.35,
-          "volume_ml": 96049.706,
-          "storage_level_m": 222.585
-        },
-        {
-          "observed_at": "2026-09-26T14:15:00Z",
-          "capacity_percent": 89.35,
-          "volume_ml": 96049.706,
-          "storage_level_m": 222.585
-        },
-        {
-          "observed_at": "2026-09-26T14:30:00Z",
-          "capacity_percent": 89.35,
-          "volume_ml": 96049.706,
-          "storage_level_m": 222.585
-        },
-        {
-          "observed_at": "2026-09-26T14:45:00Z",
-          "capacity_percent": 89.35,
-          "volume_ml": 96049.706,
-          "storage_level_m": 222.585
-        },
-        {
-          "observed_at": "2026-09-26T15:00:00Z",
-          "capacity_percent": 89.35,
-          "volume_ml": 96049.706,
-          "storage_level_m": 222.585
-        },
-        {
-          "observed_at": "2026-09-26T15:15:00Z",
-          "capacity_percent": 89.35,
-          "volume_ml": 96049.706,
-          "storage_level_m": 222.585
-        },
-        {
-          "observed_at": "2026-09-26T15:30:00Z",
-          "capacity_percent": 89.35,
-          "volume_ml": 96049.706,
-          "storage_level_m": 222.585
-        },
-        {
-          "observed_at": "2026-09-26T15:45:00Z",
-          "capacity_percent": 89.35,
-          "volume_ml": 96049.706,
-          "storage_level_m": 222.585
-        },
-        {
-          "observed_at": "2026-09-26T16:00:00Z",
-          "capacity_percent": 89.33,
-          "volume_ml": 96026.763,
-          "storage_level_m": 222.583
-        },
         {
           "observed_at": "2026-09-26T16:15:00Z",
           "capacity_percent": 89.33,
@@ -29694,6 +29555,162 @@
           "capacity_percent": 89.22,
           "volume_ml": 95912.101,
           "storage_level_m": 222.573
+        },
+        {
+          "observed_at": "2026-09-27T08:15:00Z",
+          "capacity_percent": 89.22,
+          "volume_ml": 95912.101,
+          "storage_level_m": 222.573
+        },
+        {
+          "observed_at": "2026-09-27T08:30:00Z",
+          "capacity_percent": 89.22,
+          "volume_ml": 95912.101,
+          "storage_level_m": 222.573
+        },
+        {
+          "observed_at": "2026-09-27T08:45:00Z",
+          "capacity_percent": 89.22,
+          "volume_ml": 95912.101,
+          "storage_level_m": 222.573
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 89.21,
+          "volume_ml": 95900.64,
+          "storage_level_m": 222.572
+        },
+        {
+          "observed_at": "2026-09-27T09:15:00Z",
+          "capacity_percent": 89.21,
+          "volume_ml": 95900.64,
+          "storage_level_m": 222.572
+        },
+        {
+          "observed_at": "2026-09-27T09:30:00Z",
+          "capacity_percent": 89.21,
+          "volume_ml": 95900.64,
+          "storage_level_m": 222.572
+        },
+        {
+          "observed_at": "2026-09-27T09:45:00Z",
+          "capacity_percent": 89.21,
+          "volume_ml": 95900.64,
+          "storage_level_m": 222.572
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 89.22,
+          "volume_ml": 95912.101,
+          "storage_level_m": 222.573
+        },
+        {
+          "observed_at": "2026-09-27T10:15:00Z",
+          "capacity_percent": 89.22,
+          "volume_ml": 95912.101,
+          "storage_level_m": 222.573
+        },
+        {
+          "observed_at": "2026-09-27T10:30:00Z",
+          "capacity_percent": 89.22,
+          "volume_ml": 95912.101,
+          "storage_level_m": 222.573
+        },
+        {
+          "observed_at": "2026-09-27T10:45:00Z",
+          "capacity_percent": 89.22,
+          "volume_ml": 95912.101,
+          "storage_level_m": 222.573
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 89.21,
+          "volume_ml": 95900.64,
+          "storage_level_m": 222.572
+        },
+        {
+          "observed_at": "2026-09-27T11:15:00Z",
+          "capacity_percent": 89.21,
+          "volume_ml": 95900.64,
+          "storage_level_m": 222.572
+        },
+        {
+          "observed_at": "2026-09-27T11:30:00Z",
+          "capacity_percent": 89.21,
+          "volume_ml": 95900.64,
+          "storage_level_m": 222.572
+        },
+        {
+          "observed_at": "2026-09-27T11:45:00Z",
+          "capacity_percent": 89.21,
+          "volume_ml": 95900.64,
+          "storage_level_m": 222.572
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 89.2,
+          "volume_ml": 95889.179,
+          "storage_level_m": 222.571
+        },
+        {
+          "observed_at": "2026-09-27T12:15:00Z",
+          "capacity_percent": 89.2,
+          "volume_ml": 95889.179,
+          "storage_level_m": 222.571
+        },
+        {
+          "observed_at": "2026-09-27T12:30:00Z",
+          "capacity_percent": 89.2,
+          "volume_ml": 95889.179,
+          "storage_level_m": 222.571
+        },
+        {
+          "observed_at": "2026-09-27T12:45:00Z",
+          "capacity_percent": 89.2,
+          "volume_ml": 95889.179,
+          "storage_level_m": 222.571
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 89.19,
+          "volume_ml": 95877.72,
+          "storage_level_m": 222.57
+        },
+        {
+          "observed_at": "2026-09-27T13:15:00Z",
+          "capacity_percent": 89.19,
+          "volume_ml": 95877.72,
+          "storage_level_m": 222.57
+        },
+        {
+          "observed_at": "2026-09-27T13:30:00Z",
+          "capacity_percent": 89.19,
+          "volume_ml": 95877.72,
+          "storage_level_m": 222.57
+        },
+        {
+          "observed_at": "2026-09-27T13:45:00Z",
+          "capacity_percent": 89.19,
+          "volume_ml": 95877.72,
+          "storage_level_m": 222.57
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 89.2,
+          "volume_ml": 95889.179,
+          "storage_level_m": 222.571
+        },
+        {
+          "observed_at": "2026-09-27T14:15:00Z",
+          "capacity_percent": 89.2,
+          "volume_ml": 95889.179,
+          "storage_level_m": 222.571
+        },
+        {
+          "observed_at": "2026-09-27T14:30:00Z",
+          "capacity_percent": 89.2,
+          "volume_ml": 95889.179,
+          "storage_level_m": 222.571
         }
       ]
     },
@@ -29703,12 +29720,12 @@
       "operator": "Sunwater",
       "station_code": "126004A",
       "site_id": 2124,
-      "observed_at": "2026-09-27T08:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:00:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "datetime",
-      "capacity_percent": 77.46,
-      "volume_ml": 55950.866,
-      "storage_level_m": 56.461,
+      "capacity_percent": 77.44,
+      "volume_ml": 55941.943,
+      "storage_level_m": 56.46,
       "rainfall_mm": 0.0,
       "flow_cms": 0.0,
       "total_flow_ml": 0.0,
@@ -29716,7 +29733,7 @@
       "source": "sunwater_api",
       "source_url": "https://data.sunwater.com.au/api/Sites/126004A/data",
       "information": null,
-      "full_supply_volume_ml": 72231.947,
+      "full_supply_volume_ml": 72239.079,
       "full_supply_volume_basis": "derived_from_current_volume_and_percentage",
       "latitude": -21.210234,
       "longitude": 148.8894374,
@@ -29731,71 +29748,17 @@
         "Kinchant Dam",
         "Kinchant"
       ],
-      "change_24h_percentage_points": -0.36,
-      "comparison_24h_at": "2026-09-26T08:00:00Z",
-      "change_7d_percentage_points": -2.23,
-      "comparison_7d_at": "2026-09-20T08:00:00Z",
-      "change_30d_percentage_points": -8.18,
-      "comparison_30d_at": "2026-08-28T08:00:00Z",
+      "change_24h_percentage_points": -0.29,
+      "comparison_24h_at": "2026-09-26T14:00:00Z",
+      "change_7d_percentage_points": -2.12,
+      "comparison_7d_at": "2026-09-20T14:00:00Z",
+      "change_30d_percentage_points": -8.11,
+      "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 18.4,
+      "data_age_minutes": 44.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-24T01:00:00Z",
-          "capacity_percent": 78.35,
-          "volume_ml": 56595.7,
-          "storage_level_m": 56.533
-        },
-        {
-          "observed_at": "2026-09-24T02:00:00Z",
-          "capacity_percent": 78.31,
-          "volume_ml": 56568.738,
-          "storage_level_m": 56.53
-        },
-        {
-          "observed_at": "2026-09-24T03:00:00Z",
-          "capacity_percent": 78.3,
-          "volume_ml": 56559.752,
-          "storage_level_m": 56.529
-        },
-        {
-          "observed_at": "2026-09-24T04:00:00Z",
-          "capacity_percent": 78.29,
-          "volume_ml": 56550.767,
-          "storage_level_m": 56.528
-        },
-        {
-          "observed_at": "2026-09-24T05:00:00Z",
-          "capacity_percent": 78.3,
-          "volume_ml": 56559.752,
-          "storage_level_m": 56.529
-        },
-        {
-          "observed_at": "2026-09-24T06:00:00Z",
-          "capacity_percent": 78.24,
-          "volume_ml": 56514.837,
-          "storage_level_m": 56.524
-        },
-        {
-          "observed_at": "2026-09-24T07:00:00Z",
-          "capacity_percent": 78.22,
-          "volume_ml": 56505.857,
-          "storage_level_m": 56.523
-        },
-        {
-          "observed_at": "2026-09-24T08:00:00Z",
-          "capacity_percent": 78.27,
-          "volume_ml": 56541.783,
-          "storage_level_m": 56.527
-        },
-        {
-          "observed_at": "2026-09-24T09:00:00Z",
-          "capacity_percent": 78.24,
-          "volume_ml": 56514.837,
-          "storage_level_m": 56.524
-        },
         {
           "observed_at": "2026-09-24T10:00:00Z",
           "capacity_percent": 78.18,
@@ -30281,6 +30244,60 @@
           "capacity_percent": 77.46,
           "volume_ml": 55950.866,
           "storage_level_m": 56.461
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 77.47,
+          "volume_ml": 55959.79,
+          "storage_level_m": 56.462
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 77.47,
+          "volume_ml": 55959.79,
+          "storage_level_m": 56.462
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 77.43,
+          "volume_ml": 55933.022,
+          "storage_level_m": 56.459
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 77.35,
+          "volume_ml": 55870.594,
+          "storage_level_m": 56.452
+        },
+        {
+          "observed_at": "2026-09-27T12:59:00Z",
+          "capacity_percent": 77.51,
+          "volume_ml": 55986.567,
+          "storage_level_m": 56.465
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 77.51,
+          "volume_ml": 55986.567,
+          "storage_level_m": 56.465
+        },
+        {
+          "observed_at": "2026-09-27T13:14:00Z",
+          "capacity_percent": 77.37,
+          "volume_ml": 55888.426,
+          "storage_level_m": 56.454
+        },
+        {
+          "observed_at": "2026-09-27T13:39:00Z",
+          "capacity_percent": 77.52,
+          "volume_ml": 55995.494,
+          "storage_level_m": 56.466
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 77.44,
+          "volume_ml": 55941.943,
+          "storage_level_m": 56.46
         }
       ]
     },
@@ -30290,12 +30307,12 @@
       "operator": "Sunwater",
       "station_code": "130360A",
       "site_id": 2190,
-      "observed_at": "2026-09-27T07:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:00:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "datetime",
       "capacity_percent": 1.0,
-      "volume_ml": 145.704,
-      "storage_level_m": 253.064,
+      "volume_ml": 145.405,
+      "storage_level_m": 253.061,
       "rainfall_mm": 0.0,
       "flow_cms": 0.0,
       "total_flow_ml": 0.0,
@@ -30303,7 +30320,7 @@
       "source": "sunwater_api",
       "source_url": "https://data.sunwater.com.au/api/Sites/130360A/data",
       "information": null,
-      "full_supply_volume_ml": 14570.4,
+      "full_supply_volume_ml": 14540.5,
       "full_supply_volume_basis": "derived_from_current_volume_and_percentage",
       "latitude": -24.4169671,
       "longitude": 150.7726369,
@@ -30319,58 +30336,16 @@
         "Kroombit"
       ],
       "change_24h_percentage_points": 0.0,
-      "comparison_24h_at": "2026-09-26T07:00:00Z",
+      "comparison_24h_at": "2026-09-26T14:00:00Z",
       "change_7d_percentage_points": -0.05,
-      "comparison_7d_at": "2026-09-20T07:00:00Z",
+      "comparison_7d_at": "2026-09-20T14:00:00Z",
       "change_30d_percentage_points": -0.16,
-      "comparison_30d_at": "2026-08-28T07:00:00Z",
+      "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "stable",
-      "data_age_minutes": 78.4,
+      "data_age_minutes": 44.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-23T14:00:00Z",
-          "capacity_percent": 1.03,
-          "volume_ml": 150.142,
-          "storage_level_m": 253.108
-        },
-        {
-          "observed_at": "2026-09-23T15:00:00Z",
-          "capacity_percent": 1.03,
-          "volume_ml": 149.939,
-          "storage_level_m": 253.106
-        },
-        {
-          "observed_at": "2026-09-23T16:00:00Z",
-          "capacity_percent": 1.03,
-          "volume_ml": 149.939,
-          "storage_level_m": 253.106
-        },
-        {
-          "observed_at": "2026-09-23T17:00:00Z",
-          "capacity_percent": 1.03,
-          "volume_ml": 149.837,
-          "storage_level_m": 253.105
-        },
-        {
-          "observed_at": "2026-09-23T18:00:00Z",
-          "capacity_percent": 1.03,
-          "volume_ml": 149.735,
-          "storage_level_m": 253.104
-        },
-        {
-          "observed_at": "2026-09-23T19:00:00Z",
-          "capacity_percent": 1.03,
-          "volume_ml": 149.735,
-          "storage_level_m": 253.104
-        },
-        {
-          "observed_at": "2026-09-23T20:00:00Z",
-          "capacity_percent": 1.02,
-          "volume_ml": 149.634,
-          "storage_level_m": 253.103
-        },
         {
           "observed_at": "2026-09-23T21:00:00Z",
           "capacity_percent": 1.02,
@@ -30868,6 +30843,48 @@
           "capacity_percent": 1.0,
           "volume_ml": 145.704,
           "storage_level_m": 253.064
+        },
+        {
+          "observed_at": "2026-09-27T08:00:00Z",
+          "capacity_percent": 1.0,
+          "volume_ml": 145.704,
+          "storage_level_m": 253.064
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 1.0,
+          "volume_ml": 145.704,
+          "storage_level_m": 253.064
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 1.0,
+          "volume_ml": 145.604,
+          "storage_level_m": 253.063
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 1.0,
+          "volume_ml": 145.504,
+          "storage_level_m": 253.062
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 1.0,
+          "volume_ml": 145.504,
+          "storage_level_m": 253.062
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 1.0,
+          "volume_ml": 145.405,
+          "storage_level_m": 253.061
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 1.0,
+          "volume_ml": 145.405,
+          "storage_level_m": 253.061
         }
       ]
     },
@@ -30877,12 +30894,12 @@
       "operator": "Sunwater",
       "station_code": "422315B",
       "site_id": 2661,
-      "observed_at": "2026-09-27T08:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:00:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "datetime",
-      "capacity_percent": 56.4,
-      "volume_ml": 59926.207,
-      "storage_level_m": 468.098,
+      "capacity_percent": 56.38,
+      "volume_ml": 59908.77,
+      "storage_level_m": 468.096,
       "rainfall_mm": 0.0,
       "flow_cms": 0.0,
       "total_flow_ml": 0.0,
@@ -30890,7 +30907,7 @@
       "source": "sunwater_api",
       "source_url": "https://data.sunwater.com.au/api/Sites/422315B/data",
       "information": null,
-      "full_supply_volume_ml": 106252.14,
+      "full_supply_volume_ml": 106258.904,
       "full_supply_volume_basis": "derived_from_current_volume_and_percentage",
       "latitude": -28.23613,
       "longitude": 151.9094379,
@@ -30905,59 +30922,17 @@
         "Leslie Dam",
         "Leslie"
       ],
-      "change_24h_percentage_points": -0.02,
-      "comparison_24h_at": "2026-09-26T08:00:00Z",
-      "change_7d_percentage_points": -0.18,
-      "comparison_7d_at": "2026-09-20T08:00:00Z",
-      "change_30d_percentage_points": -0.94,
-      "comparison_30d_at": "2026-08-28T08:00:00Z",
+      "change_24h_percentage_points": -0.05,
+      "comparison_24h_at": "2026-09-26T14:00:00Z",
+      "change_7d_percentage_points": -0.19,
+      "comparison_7d_at": "2026-09-20T14:00:00Z",
+      "change_30d_percentage_points": -0.95,
+      "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 18.4,
+      "data_age_minutes": 44.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-23T16:00:00Z",
-          "capacity_percent": 56.45,
-          "volume_ml": 59978.54,
-          "storage_level_m": 468.104
-        },
-        {
-          "observed_at": "2026-09-23T17:00:00Z",
-          "capacity_percent": 56.44,
-          "volume_ml": 59969.816,
-          "storage_level_m": 468.103
-        },
-        {
-          "observed_at": "2026-09-23T18:00:00Z",
-          "capacity_percent": 56.42,
-          "volume_ml": 59943.648,
-          "storage_level_m": 468.1
-        },
-        {
-          "observed_at": "2026-09-23T19:00:00Z",
-          "capacity_percent": 56.45,
-          "volume_ml": 59978.54,
-          "storage_level_m": 468.104
-        },
-        {
-          "observed_at": "2026-09-23T20:00:00Z",
-          "capacity_percent": 56.45,
-          "volume_ml": 59978.54,
-          "storage_level_m": 468.104
-        },
-        {
-          "observed_at": "2026-09-23T21:00:00Z",
-          "capacity_percent": 56.45,
-          "volume_ml": 59978.54,
-          "storage_level_m": 468.104
-        },
-        {
-          "observed_at": "2026-09-23T22:00:00Z",
-          "capacity_percent": 56.45,
-          "volume_ml": 59978.54,
-          "storage_level_m": 468.104
-        },
         {
           "observed_at": "2026-09-23T23:00:00Z",
           "capacity_percent": 56.43,
@@ -31455,6 +31430,48 @@
           "capacity_percent": 56.4,
           "volume_ml": 59926.207,
           "storage_level_m": 468.098
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 56.38,
+          "volume_ml": 59908.77,
+          "storage_level_m": 468.096
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 56.41,
+          "volume_ml": 59934.927,
+          "storage_level_m": 468.099
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 56.38,
+          "volume_ml": 59908.77,
+          "storage_level_m": 468.096
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 56.33,
+          "volume_ml": 59847.768,
+          "storage_level_m": 468.089
+        },
+        {
+          "observed_at": "2026-09-27T12:08:10Z",
+          "capacity_percent": 56.43,
+          "volume_ml": 59961.092,
+          "storage_level_m": 468.102
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 56.43,
+          "volume_ml": 59952.37,
+          "storage_level_m": 468.101
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 56.38,
+          "volume_ml": 59908.77,
+          "storage_level_m": 468.096
         }
       ]
     },
@@ -31464,12 +31481,12 @@
       "operator": "Sunwater",
       "station_code": "136024A",
       "site_id": 2241,
-      "observed_at": "2026-09-27T07:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:00:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "datetime",
-      "capacity_percent": 88.56,
-      "volume_ml": 150926.532,
-      "storage_level_m": 60.532,
+      "capacity_percent": 88.57,
+      "volume_ml": 150955.222,
+      "storage_level_m": 60.534,
       "rainfall_mm": 0.0,
       "flow_cms": 0.0,
       "total_flow_ml": 0.0,
@@ -31477,7 +31494,7 @@
       "source": "sunwater_api",
       "source_url": "https://data.sunwater.com.au/api/Sites/136024A/data",
       "information": null,
-      "full_supply_volume_ml": 170422.913,
+      "full_supply_volume_ml": 170436.064,
       "full_supply_volume_basis": "derived_from_current_volume_and_percentage",
       "latitude": -25.3512418,
       "longitude": 151.9178881,
@@ -31492,59 +31509,17 @@
         "Paradise Dam",
         "Paradise"
       ],
-      "change_24h_percentage_points": -0.08,
-      "comparison_24h_at": "2026-09-26T07:00:00Z",
-      "change_7d_percentage_points": -0.7,
-      "comparison_7d_at": "2026-09-20T07:00:00Z",
-      "change_30d_percentage_points": -6.59,
-      "comparison_30d_at": "2026-08-28T07:00:00Z",
+      "change_24h_percentage_points": -0.06,
+      "comparison_24h_at": "2026-09-26T14:00:00Z",
+      "change_7d_percentage_points": -0.62,
+      "comparison_7d_at": "2026-09-20T14:00:00Z",
+      "change_30d_percentage_points": -6.58,
+      "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 78.4,
+      "data_age_minutes": 44.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-23T17:00:00Z",
-          "capacity_percent": 88.76,
-          "volume_ml": 151271.044,
-          "storage_level_m": 60.556
-        },
-        {
-          "observed_at": "2026-09-23T18:00:00Z",
-          "capacity_percent": 88.75,
-          "volume_ml": 151256.679,
-          "storage_level_m": 60.555
-        },
-        {
-          "observed_at": "2026-09-23T19:00:00Z",
-          "capacity_percent": 88.76,
-          "volume_ml": 151271.044,
-          "storage_level_m": 60.556
-        },
-        {
-          "observed_at": "2026-09-23T20:00:00Z",
-          "capacity_percent": 88.74,
-          "volume_ml": 151242.315,
-          "storage_level_m": 60.554
-        },
-        {
-          "observed_at": "2026-09-23T21:00:00Z",
-          "capacity_percent": 88.76,
-          "volume_ml": 151271.044,
-          "storage_level_m": 60.556
-        },
-        {
-          "observed_at": "2026-09-23T22:00:00Z",
-          "capacity_percent": 88.73,
-          "volume_ml": 151227.952,
-          "storage_level_m": 60.553
-        },
-        {
-          "observed_at": "2026-09-23T23:00:00Z",
-          "capacity_percent": 88.73,
-          "volume_ml": 151227.952,
-          "storage_level_m": 60.553
-        },
         {
           "observed_at": "2026-09-24T00:00:00Z",
           "capacity_percent": 88.73,
@@ -32042,6 +32017,48 @@
           "capacity_percent": 88.56,
           "volume_ml": 150926.532,
           "storage_level_m": 60.532
+        },
+        {
+          "observed_at": "2026-09-27T08:00:00Z",
+          "capacity_percent": 88.57,
+          "volume_ml": 150955.222,
+          "storage_level_m": 60.534
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 88.57,
+          "volume_ml": 150940.877,
+          "storage_level_m": 60.533
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 88.58,
+          "volume_ml": 150969.568,
+          "storage_level_m": 60.535
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 88.58,
+          "volume_ml": 150969.568,
+          "storage_level_m": 60.535
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 88.57,
+          "volume_ml": 150955.222,
+          "storage_level_m": 60.534
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 88.57,
+          "volume_ml": 150955.222,
+          "storage_level_m": 60.534
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 88.57,
+          "volume_ml": 150955.222,
+          "storage_level_m": 60.534
         }
       ]
     },
@@ -32051,8 +32068,8 @@
       "operator": "Sunwater",
       "station_code": "122010A",
       "site_id": 2087,
-      "observed_at": "2026-09-27T08:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:00:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "datetime",
       "capacity_percent": 93.3,
       "volume_ml": 458456.288,
@@ -32080,53 +32097,17 @@
         "Peter Faust",
         "Proserpine Dam"
       ],
-      "change_24h_percentage_points": -0.11,
-      "comparison_24h_at": "2026-09-26T08:00:00Z",
-      "change_7d_percentage_points": -0.61,
-      "comparison_7d_at": "2026-09-20T08:00:00Z",
-      "change_30d_percentage_points": -2.42,
-      "comparison_30d_at": "2026-08-28T08:00:00Z",
+      "change_24h_percentage_points": -0.06,
+      "comparison_24h_at": "2026-09-26T14:00:00Z",
+      "change_7d_percentage_points": -0.6,
+      "comparison_7d_at": "2026-09-20T14:00:00Z",
+      "change_30d_percentage_points": -2.43,
+      "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 18.4,
+      "data_age_minutes": 44.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-23T16:00:00Z",
-          "capacity_percent": 93.64,
-          "volume_ml": 460160.847,
-          "storage_level_m": 84.862
-        },
-        {
-          "observed_at": "2026-09-23T17:00:00Z",
-          "capacity_percent": 93.64,
-          "volume_ml": 460160.847,
-          "storage_level_m": 84.862
-        },
-        {
-          "observed_at": "2026-09-23T18:00:00Z",
-          "capacity_percent": 93.64,
-          "volume_ml": 460160.847,
-          "storage_level_m": 84.862
-        },
-        {
-          "observed_at": "2026-09-23T19:00:00Z",
-          "capacity_percent": 93.67,
-          "volume_ml": 460285.751,
-          "storage_level_m": 84.865
-        },
-        {
-          "observed_at": "2026-09-23T20:00:00Z",
-          "capacity_percent": 93.66,
-          "volume_ml": 460244.114,
-          "storage_level_m": 84.864
-        },
-        {
-          "observed_at": "2026-09-23T21:00:00Z",
-          "capacity_percent": 93.63,
-          "volume_ml": 460119.218,
-          "storage_level_m": 84.861
-        },
         {
           "observed_at": "2026-09-23T22:00:00Z",
           "capacity_percent": 93.63,
@@ -32630,6 +32611,42 @@
           "capacity_percent": 93.3,
           "volume_ml": 458456.288,
           "storage_level_m": 84.821
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 93.3,
+          "volume_ml": 458497.807,
+          "storage_level_m": 84.822
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 93.31,
+          "volume_ml": 458539.33,
+          "storage_level_m": 84.823
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 93.28,
+          "volume_ml": 458373.256,
+          "storage_level_m": 84.819
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 93.3,
+          "volume_ml": 458497.807,
+          "storage_level_m": 84.822
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 93.32,
+          "volume_ml": 458580.856,
+          "storage_level_m": 84.824
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 93.3,
+          "volume_ml": 458456.288,
+          "storage_level_m": 84.821
         }
       ]
     },
@@ -32639,12 +32656,12 @@
       "operator": "Sunwater",
       "station_code": "125015A",
       "site_id": 2112,
-      "observed_at": "2026-09-27T08:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:00:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "datetime",
-      "capacity_percent": 97.96,
-      "volume_ml": 144548.049,
-      "storage_level_m": 289.721,
+      "capacity_percent": 97.93,
+      "volume_ml": 144505.251,
+      "storage_level_m": 289.717,
       "rainfall_mm": 0.0,
       "flow_cms": 0.0,
       "total_flow_ml": 0.0,
@@ -32652,7 +32669,7 @@
       "source": "sunwater_api",
       "source_url": "https://data.sunwater.com.au/api/Sites/125015A/data",
       "information": null,
-      "full_supply_volume_ml": 147558.237,
+      "full_supply_volume_ml": 147559.738,
       "full_supply_volume_basis": "derived_from_current_volume_and_percentage",
       "latitude": -21.217626,
       "longitude": 148.6628368,
@@ -32667,53 +32684,17 @@
         "Teemburra Dam",
         "Teemburra"
       ],
-      "change_24h_percentage_points": -0.05,
-      "comparison_24h_at": "2026-09-26T08:00:00Z",
-      "change_7d_percentage_points": -0.38,
-      "comparison_7d_at": "2026-09-20T08:00:00Z",
-      "change_30d_percentage_points": -1.6,
-      "comparison_30d_at": "2026-08-28T08:00:00Z",
+      "change_24h_percentage_points": -0.07,
+      "comparison_24h_at": "2026-09-26T14:00:00Z",
+      "change_7d_percentage_points": -0.42,
+      "comparison_7d_at": "2026-09-20T14:00:00Z",
+      "change_30d_percentage_points": -1.62,
+      "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 18.4,
+      "data_age_minutes": 44.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-23T15:00:00Z",
-          "capacity_percent": 98.11,
-          "volume_ml": 144772.892,
-          "storage_level_m": 289.742
-        },
-        {
-          "observed_at": "2026-09-23T16:00:00Z",
-          "capacity_percent": 98.11,
-          "volume_ml": 144762.179,
-          "storage_level_m": 289.741
-        },
-        {
-          "observed_at": "2026-09-23T17:00:00Z",
-          "capacity_percent": 98.1,
-          "volume_ml": 144751.467,
-          "storage_level_m": 289.74
-        },
-        {
-          "observed_at": "2026-09-23T18:00:00Z",
-          "capacity_percent": 98.12,
-          "volume_ml": 144783.605,
-          "storage_level_m": 289.743
-        },
-        {
-          "observed_at": "2026-09-23T19:00:00Z",
-          "capacity_percent": 98.11,
-          "volume_ml": 144772.892,
-          "storage_level_m": 289.742
-        },
-        {
-          "observed_at": "2026-09-23T20:00:00Z",
-          "capacity_percent": 98.11,
-          "volume_ml": 144762.179,
-          "storage_level_m": 289.741
-        },
         {
           "observed_at": "2026-09-23T21:00:00Z",
           "capacity_percent": 98.11,
@@ -33217,6 +33198,42 @@
           "capacity_percent": 97.96,
           "volume_ml": 144548.049,
           "storage_level_m": 289.721
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 97.95,
+          "volume_ml": 144537.349,
+          "storage_level_m": 289.72
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 97.94,
+          "volume_ml": 144515.949,
+          "storage_level_m": 289.718
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 97.95,
+          "volume_ml": 144526.649,
+          "storage_level_m": 289.719
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 97.94,
+          "volume_ml": 144515.949,
+          "storage_level_m": 289.718
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 97.94,
+          "volume_ml": 144515.949,
+          "storage_level_m": 289.718
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 97.93,
+          "volume_ml": 144505.251,
+          "storage_level_m": 289.717
         }
       ]
     },
@@ -33226,12 +33243,12 @@
       "operator": "Sunwater",
       "station_code": "110006A",
       "site_id": 1986,
-      "observed_at": "2026-09-27T08:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:00:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "datetime",
-      "capacity_percent": 94.95,
-      "volume_ml": 416740.869,
-      "storage_level_m": 669.776,
+      "capacity_percent": 94.87,
+      "volume_ml": 416402.852,
+      "storage_level_m": 669.766,
       "rainfall_mm": 0.0,
       "flow_cms": 0.0,
       "total_flow_ml": 0.0,
@@ -33239,7 +33256,7 @@
       "source": "sunwater_api",
       "source_url": "https://data.sunwater.com.au/api/Sites/110014A/data",
       "information": null,
-      "full_supply_volume_ml": 438905.602,
+      "full_supply_volume_ml": 438919.418,
       "full_supply_volume_basis": "derived_from_current_volume_and_percentage",
       "latitude": -17.1885969,
       "longitude": 145.5753629,
@@ -33255,53 +33272,17 @@
         "Tinaroo Falls",
         "Tinaroo Dam"
       ],
-      "change_24h_percentage_points": -0.22,
-      "comparison_24h_at": "2026-09-26T08:00:00Z",
-      "change_7d_percentage_points": -1.24,
-      "comparison_7d_at": "2026-09-20T08:00:00Z",
-      "change_30d_percentage_points": -3.43,
-      "comparison_30d_at": "2026-08-28T08:00:00Z",
+      "change_24h_percentage_points": -0.29,
+      "comparison_24h_at": "2026-09-26T14:00:00Z",
+      "change_7d_percentage_points": -1.29,
+      "comparison_7d_at": "2026-09-20T14:00:00Z",
+      "change_30d_percentage_points": -3.48,
+      "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 18.4,
+      "data_age_minutes": 44.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-23T15:00:00Z",
-          "capacity_percent": 95.76,
-          "volume_ml": 420301.679,
-          "storage_level_m": 669.881
-        },
-        {
-          "observed_at": "2026-09-23T16:00:00Z",
-          "capacity_percent": 95.73,
-          "volume_ml": 420199.647,
-          "storage_level_m": 669.878
-        },
-        {
-          "observed_at": "2026-09-23T17:00:00Z",
-          "capacity_percent": 95.73,
-          "volume_ml": 420199.647,
-          "storage_level_m": 669.878
-        },
-        {
-          "observed_at": "2026-09-23T18:00:00Z",
-          "capacity_percent": 95.73,
-          "volume_ml": 420165.64,
-          "storage_level_m": 669.877
-        },
-        {
-          "observed_at": "2026-09-23T19:00:00Z",
-          "capacity_percent": 95.71,
-          "volume_ml": 420097.632,
-          "storage_level_m": 669.875
-        },
-        {
-          "observed_at": "2026-09-23T20:00:00Z",
-          "capacity_percent": 95.72,
-          "volume_ml": 420131.635,
-          "storage_level_m": 669.876
-        },
         {
           "observed_at": "2026-09-23T21:00:00Z",
           "capacity_percent": 95.7,
@@ -33805,6 +33786,42 @@
           "capacity_percent": 94.95,
           "volume_ml": 416740.869,
           "storage_level_m": 669.776
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 94.95,
+          "volume_ml": 416740.869,
+          "storage_level_m": 669.776
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 94.91,
+          "volume_ml": 416571.836,
+          "storage_level_m": 669.771
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 94.91,
+          "volume_ml": 416571.836,
+          "storage_level_m": 669.771
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 94.89,
+          "volume_ml": 416504.237,
+          "storage_level_m": 669.769
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 94.9,
+          "volume_ml": 416538.036,
+          "storage_level_m": 669.77
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 94.87,
+          "volume_ml": 416402.852,
+          "storage_level_m": 669.766
         }
       ]
     },
@@ -33814,12 +33831,12 @@
       "operator": "Sunwater",
       "station_code": "136113A",
       "site_id": 2255,
-      "observed_at": "2026-09-27T07:00:00Z",
-      "observation_date": "2026-09-27",
+      "observed_at": "2026-09-27T14:00:00Z",
+      "observation_date": "2026-09-28",
       "observation_precision": "datetime",
-      "capacity_percent": 95.03,
-      "volume_ml": 157184.348,
-      "storage_level_m": 227.78,
+      "capacity_percent": 95.01,
+      "volume_ml": 157152.871,
+      "storage_level_m": 227.778,
       "rainfall_mm": 0.0,
       "flow_cms": 0.0,
       "total_flow_ml": 0.0,
@@ -33827,7 +33844,7 @@
       "source": "sunwater_api",
       "source_url": "https://data.sunwater.com.au/api/Sites/136113A/data",
       "information": null,
-      "full_supply_volume_ml": 165404.975,
+      "full_supply_volume_ml": 165406.664,
       "full_supply_volume_basis": "derived_from_current_volume_and_percentage",
       "latitude": -25.1857971,
       "longitude": 150.9817125,
@@ -33842,59 +33859,17 @@
         "Wuruma Dam",
         "Wuruma"
       ],
-      "change_24h_percentage_points": -0.06,
-      "comparison_24h_at": "2026-09-26T07:00:00Z",
+      "change_24h_percentage_points": -0.04,
+      "comparison_24h_at": "2026-09-26T14:00:00Z",
       "change_7d_percentage_points": -0.25,
-      "comparison_7d_at": "2026-09-20T07:00:00Z",
-      "change_30d_percentage_points": -1.16,
-      "comparison_30d_at": "2026-08-28T07:00:00Z",
+      "comparison_7d_at": "2026-09-20T14:00:00Z",
+      "change_30d_percentage_points": -1.14,
+      "comparison_30d_at": "2026-08-28T14:00:00Z",
       "trend_7d": "falling",
-      "data_age_minutes": 78.4,
+      "data_age_minutes": 44.0,
       "freshness_status": "current",
       "quality_flags": [],
       "history_30d": [
-        {
-          "observed_at": "2026-09-23T14:00:00Z",
-          "capacity_percent": 95.13,
-          "volume_ml": 157357.556,
-          "storage_level_m": 227.791
-        },
-        {
-          "observed_at": "2026-09-23T15:00:00Z",
-          "capacity_percent": 95.11,
-          "volume_ml": 157326.053,
-          "storage_level_m": 227.789
-        },
-        {
-          "observed_at": "2026-09-23T16:00:00Z",
-          "capacity_percent": 95.14,
-          "volume_ml": 157373.309,
-          "storage_level_m": 227.792
-        },
-        {
-          "observed_at": "2026-09-23T17:00:00Z",
-          "capacity_percent": 95.13,
-          "volume_ml": 157357.556,
-          "storage_level_m": 227.791
-        },
-        {
-          "observed_at": "2026-09-23T18:00:00Z",
-          "capacity_percent": 95.12,
-          "volume_ml": 157341.804,
-          "storage_level_m": 227.79
-        },
-        {
-          "observed_at": "2026-09-23T19:00:00Z",
-          "capacity_percent": 95.11,
-          "volume_ml": 157326.053,
-          "storage_level_m": 227.789
-        },
-        {
-          "observed_at": "2026-09-23T20:00:00Z",
-          "capacity_percent": 95.14,
-          "volume_ml": 157373.309,
-          "storage_level_m": 227.792
-        },
         {
           "observed_at": "2026-09-23T21:00:00Z",
           "capacity_percent": 95.11,
@@ -34392,6 +34367,48 @@
           "capacity_percent": 95.03,
           "volume_ml": 157184.348,
           "storage_level_m": 227.78
+        },
+        {
+          "observed_at": "2026-09-27T08:00:00Z",
+          "capacity_percent": 95.05,
+          "volume_ml": 157215.83,
+          "storage_level_m": 227.782
+        },
+        {
+          "observed_at": "2026-09-27T09:00:00Z",
+          "capacity_percent": 95.05,
+          "volume_ml": 157215.83,
+          "storage_level_m": 227.782
+        },
+        {
+          "observed_at": "2026-09-27T10:00:00Z",
+          "capacity_percent": 95.02,
+          "volume_ml": 157168.609,
+          "storage_level_m": 227.779
+        },
+        {
+          "observed_at": "2026-09-27T11:00:00Z",
+          "capacity_percent": 95.02,
+          "volume_ml": 157168.609,
+          "storage_level_m": 227.779
+        },
+        {
+          "observed_at": "2026-09-27T12:00:00Z",
+          "capacity_percent": 95.02,
+          "volume_ml": 157168.609,
+          "storage_level_m": 227.779
+        },
+        {
+          "observed_at": "2026-09-27T13:00:00Z",
+          "capacity_percent": 95.0,
+          "volume_ml": 157137.134,
+          "storage_level_m": 227.777
+        },
+        {
+          "observed_at": "2026-09-27T14:00:00Z",
+          "capacity_percent": 95.01,
+          "volume_ml": 157152.871,
+          "storage_level_m": 227.778
         }
       ]
     }
