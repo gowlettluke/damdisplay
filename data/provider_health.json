@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-10-21T18:43:17.703832Z",
-  "overall_status": "failed",
-  "required_source_failure_count": 2,
+  "generated_at": "2026-10-21T22:26:01.243344Z",
+  "overall_status": "degraded",
+  "required_source_failure_count": 0,
   "sources": [
     {
       "source": "seqwater_current_page",
       "provider": "Seqwater",
       "role": "current_primary",
       "required": true,
-      "status": "failed",
-      "records": 0,
-      "dams": 0,
-      "newest_observation": null,
-      "message": "403 Client Error: Forbidden for url: https://www.seqwater.com.au/dam-levels",
-      "started_at": "2026-10-21T18:43:27.963489Z",
-      "finished_at": "2026-10-21T18:43:28.253993Z",
-      "duration_seconds": 0.291
+      "status": "ok",
+      "records": 25,
+      "dams": 25,
+      "newest_observation": "2026-10-21T21:05:00Z",
+      "message": null,
+      "started_at": "2026-10-21T22:26:15.236054Z",
+      "finished_at": "2026-10-21T22:26:15.966798Z",
+      "duration_seconds": 0.731
     },
     {
       "source": "seqwater_history",
       "provider": "Seqwater",
       "role": "history_primary",
       "required": true,
-      "status": "failed",
-      "records": 0,
-      "dams": 0,
-      "newest_observation": null,
-      "message": "403 Client Error: Forbidden for url: https://www.seqwater.com.au/historic-dam-levels",
-      "started_at": "2026-10-21T18:43:28.254035Z",
-      "finished_at": "2026-10-21T18:43:28.376669Z",
-      "duration_seconds": 0.123
+      "status": "ok",
+      "records": 128,
+      "dams": 25,
+      "newest_observation": "2026-10-21T14:00:00Z",
+      "message": "history_mode=incremental; start_date=2026-10-18",
+      "started_at": "2026-10-21T22:26:15.966832Z",
+      "finished_at": "2026-10-21T22:26:16.737067Z",
+      "duration_seconds": 0.77
     },
     {
       "source": "sunwater_api",
@@ -37,13 +37,13 @@
       "role": "current_and_history_primary",
       "required": true,
       "status": "ok",
-      "records": 97245,
+      "records": 97281,
       "dams": 20,
-      "newest_observation": "2026-10-21T18:38:10Z",
+      "newest_observation": "2026-10-21T22:15:00Z",
       "message": "history_mode=incremental; starts=110014A:2025-09-16, 120016A:2026-10-18, 120211A:2026-10-18, 122010A:2026-10-18, +16 stations",
-      "started_at": "2026-10-21T18:43:28.376704Z",
-      "finished_at": "2026-10-21T18:44:33.851086Z",
-      "duration_seconds": 65.474
+      "started_at": "2026-10-21T22:26:16.737115Z",
+      "finished_at": "2026-10-21T22:27:19.628540Z",
+      "duration_seconds": 62.891
     },
     {
       "source": "sunwater_current_page",
@@ -55,9 +55,9 @@
       "dams": 0,
       "newest_observation": null,
       "message": "Page.goto: Timeout 90000ms exceeded.\nCall log:\n  - navigating to \"https://www.sunwater.com.au/dams/\", waiting until \"networkidle\"\n",
-      "started_at": "2026-10-21T18:44:33.851182Z",
-      "finished_at": "2026-10-21T18:46:04.532564Z",
-      "duration_seconds": 90.681
+      "started_at": "2026-10-21T22:27:19.628637Z",
+      "finished_at": "2026-10-21T22:28:50.328866Z",
+      "duration_seconds": 90.7
     }
   ]
 }
